@@ -1,4 +1,4 @@
-import MainButton from "../MainButton";
+import MainInput from "../MainInput";
 
 const Newsletter = () => {
   return (
@@ -13,7 +13,7 @@ const Newsletter = () => {
             Sign up for deals, new products and promotions
           </p>
         </div>
-        <MainButton className="py-2 px-7 w-1/4" value={'SignUp'}/>
+        <MainInput className={"w-4/12"} type="email" selle={true} placeholder="Email address"/>
       </section>
     </div>
   );
