@@ -137,3 +137,5 @@ header , .sell-banner{
 .swiper {
   width: -webkit-fill-available !important;
 }
+
+.child-input:focus {}

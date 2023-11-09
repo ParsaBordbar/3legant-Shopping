@@ -7,7 +7,7 @@ import { DataProduct } from "../data/index";
 import { useMemo } from "react";
 import { TProduct } from "@/types";
 import { Slider } from "@/components/splide";
-import CollecItem from "@/components/collecItems/inex";
+import CollecItem from "@/components/collecItems";
 import TimerItems from "@/components/timerItems";
 import DeliveryItems from "@/components/DeliveryItems";
 import Newsletter from "@/components/Newsletter";
