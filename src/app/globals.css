@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* fonts */
+
+@font-face {
+  font-family: "Poppins";
+  src: url("https://db.onlinewebfonts.com/t/2f86dc938a55788d3416b876b43a116a.eot");
+  src: url("https://db.onlinewebfonts.com/t/2f86dc938a55788d3416b876b43a116a.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/2f86dc938a55788d3416b876b43a116a.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/2f86dc938a55788d3416b876b43a116a.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/2f86dc938a55788d3416b876b43a116a.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/2f86dc938a55788d3416b876b43a116a.svg#Poppins")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Space Grotesk Regular";
+  src: url("https://db.onlinewebfonts.com/t/6fadb95f11c1a47a68286abbd4c33891.eot");
+  src: url("https://db.onlinewebfonts.com/t/6fadb95f11c1a47a68286abbd4c33891.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/6fadb95f11c1a47a68286abbd4c33891.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/6fadb95f11c1a47a68286abbd4c33891.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/6fadb95f11c1a47a68286abbd4c33891.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/6fadb95f11c1a47a68286abbd4c33891.svg#Space Grotesk Regular")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.eot");
+  src: url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/1130e1ae4e4a76c7118c0b35c4b9d019.svg#Inter")
+      format("svg");
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --bg-alert-offer: rgb(20, 23, 24);
+  --text-attention: rgb(255, 171, 0);
+  --bg-header: linear-gradient(
+      0deg,
+      rgba(255, 171, 0, 0.64) 0%,
+      rgba(255, 171, 0, 0.64) 100%
+    ),
+    #fff;
+  --primary-font: "Space Grotesk Regular";
+  --sec-font: "Poppins", sans-serif;
+  --third-font: "Inter";
+  --bg-btn: rgb(20, 23, 24);
+  --primary-color: rgba(0, 0, 0, 1);
+  --sec-color: rgb(244, 244, 244);
+  --green: rgba(56, 203, 137, 1);
+  --orange: rgba(255, 171, 0, 1);
+  --red: rgba(255, 86, 48, 1);
+  --neutral-07: rgba(20, 23, 24, 1);
+  --neutral-06: rgba(35, 38, 39, 1);
+  --neutral-05: rgba(52, 56, 57, 1);
+  --neutral-04: rgba(108, 114, 117, 1);
+  --neutral-03: rgba(232, 236, 239, 1);
+  --neutral-02: rgba(243, 245, 247, 1);
+  --neutral-01: rgba(254, 254, 254, 1);
+  --color-mark-baner: rgba(55, 125, 255, 1);
+  --bg-pop-over: rgba(255, 161, 46, 0.824);
+  --bg-items-pop-over: rgba(255, 160, 44, 0.499);
+  --box-shadow: 0px 8px 16px -8px rgba(15, 15, 15, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+    --color-mark-baner: rgba(55, 125, 255, 1);
+  }
+}
+/* styles */
+
+html {
+  overflow-x: hidden;
+}
+
+.primary-font {
+  font-family: var(--primary-font);
+}
+
+.sec-font {
+  font-family: var(--sec-font);
+}
+
+.third-font {
+  font-family: var(--third-font);
+}
+
+header , .sell-banner{
+  background: var(--bg-header);
+}
+
+.rete svg {
+  width: 16px;
+  height: 16px;
+}
+
+.slick-track {
+  width: 100% !important;
+  gap: 24px;
+  display: flex;
+}
+
+.swiper-wrapper {
+  justify-content: space-between;
+  gap: 3.125rem;
+}
+
+.slick-dots {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper {
+  width: -webkit-fill-available !important;
+}
