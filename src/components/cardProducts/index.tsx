@@ -3,6 +3,7 @@ import { useState } from "react";
 import MainButton from "../MainButton";
 import DefaultRating from "../Rating";
 import { TProduct } from "@/types";
+import Link from "next/link";
 
 const CartProduct = (props: TProduct) => {
   const [show, setShow] = useState<boolean>(false);
@@ -53,7 +54,9 @@ const CartProduct = (props: TProduct) => {
 
       <section className="h-[349px] relative">
         <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-          <p className=" uppercase cursor-default px-[14px] font-bold py-1 rounded bg-white text-base third-font">{props.pos}</p>
+          <p className=" uppercase cursor-default px-[14px] font-bold py-1 rounded bg-white text-base third-font">
+            {props.pos}
+          </p>
           {show && (
             <picture className="inline-block drop-shadow top-4 left-4 cursor-pointer rounded-full p-1.5 bg-white shadow-[var(--box-shadow)]">
               <img
@@ -68,10 +71,12 @@ const CartProduct = (props: TProduct) => {
           <img className="w-full h-full" src={props.img} alt="" />
         </picture>
         {show && (
-          <MainButton
-            className="w-[230px]  absolute bottom-4 left-4 py-2 px-6"
-            value={"Add To Cart"}
-          />
+          <Link href={`/sinpro?id=${props.id}`}>
+            <MainButton
+              className="w-[230px]  absolute bottom-4 left-4 py-2 px-6"
+              value={"Add To Cart"}
+            />
+          </Link>
         )}
       </section>
 
