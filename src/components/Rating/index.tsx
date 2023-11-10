@@ -1,10 +1,10 @@
 'use client'
 import { Rating } from "@material-tailwind/react";
  
-const DefaultRating = () => {
+const DefaultRating = (props:{className?:string}) => {
   return (
 
-        <Rating className="flex rete gap-0.5" value={4} />
+        <Rating className={`flex ${props.className} rete gap-0.5`} value={3} />
 
   );
 }

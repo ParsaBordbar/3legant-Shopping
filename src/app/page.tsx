@@ -31,6 +31,26 @@ export default function Home() {
 
   return (
     <main className="flex flex-col">
+      <div className="banner-one  w-full h-[721px]">
+        {/* <picture className="w-full">
+          <img className="w-full" src="/banners/ImagePlaceholder.svg" alt="" />
+        </picture> */}
+        <div className=" absolute lg:top-1/2 lg:left-1/2  min-[1321px]:top-[282px] flex flex-col gap-7 min-[1321px]:left-[732px] ">
+          <h1 className="flex flex-col gap-2">
+            <span className="text-8xl font-bold  animate-wiggle sec-font">
+              Listen to the{" "}
+              <mark className="bg-transparent text-[var(--color-mark-baner)]">
+                amazing
+              </mark>{" "}
+              music sound.
+            </span>
+            <span className="third-font">
+              Experience music like never before
+            </span>
+          </h1>
+          <MainButton className="px-14 w-72 py-3" value={"Shopping Now"} />
+        </div>
+      </div>
       <div className="flex gap-12 flex-col px-40">
         <section className=" flex gap-6 py-10 items-center">
           <BrandsList img={"/brandsLogo/logo 01.svg"} />
@@ -113,7 +133,7 @@ export default function Home() {
           <picture className="inline-block h-[532px] w-1/2">
             <img
               className="w-full object-cover h-full"
-              src="/baners/counterSeler.svg"
+              src="/banners/counterSeler.svg"
               alt=""
             />
           </picture>
@@ -199,8 +219,7 @@ export default function Home() {
         </div>
       </div>
 
-      <Newsletter/>
-      
+      <Newsletter />
     </main>
   );
 }

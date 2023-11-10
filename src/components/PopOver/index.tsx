@@ -25,7 +25,7 @@ const PopoverList = (props: {
     <Popover open={openPopover} handler={setOpenPopover}>
       <PopoverHandler {...triggers}>
         <Button
-          className="font-semibold  outline-none text-sm p-1 flex items-center capitalize gap-2 primary-font"
+          className="font-semibold border-none text-black outline-none text-sm p-1 flex items-center capitalize gap-2 primary-font"
           variant="text"
         >
           {props.value}
@@ -36,9 +36,9 @@ const PopoverList = (props: {
       </PopoverHandler>
       <PopoverContent
         {...triggers}
-        className={`z-50 bg-[var(--bg-items-pop-over)] outline-none ${props.className} min-w-[10rem] `}
+        className={`z-50 border-none bg-[var(--bg-items-pop-over)] outline-none ${props.className} min-w-[10rem] `}
       >
-        <div className="flex  flex-col gap-1 w-full   rounded-lg ">
+        <div className="flex   flex-col gap-1 w-full   rounded-lg ">
           {props.children}
         </div>
       </PopoverContent>

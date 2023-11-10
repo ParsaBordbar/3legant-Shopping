@@ -138,4 +138,11 @@ header , .sell-banner{
   width: -webkit-fill-available !important;
 }
 
-.child-input:focus {}
+
+.banner-one{
+  background: url('/banners/ImagePlaceholder.svg');
+}
+
+.banner-two{
+  background: url('/banners/headerbanner-2.svg');
+}

@@ -4,7 +4,7 @@ const Newsletter = () => {
   return (
     <div className="w-full relative mt-10">
       <picture>
-        <img className="w-full" src="/baners/newsletterBanner.svg" alt="" />
+        <img className="w-full" src="/banners/newsletterBanner.svg" alt="" />
       </picture>
       <section className="flex absolute top-[6.25rem] left-0 bottom-0 right-0 items-center flex-col gap-8">
         <div className="flex items-center flex-col gap-2">
