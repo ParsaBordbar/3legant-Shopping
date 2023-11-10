@@ -8,9 +8,11 @@ const Header = () => {
   return (
     <header className="flex flex-col ">
       <section className="flex px-[160px] items-center py-3 w-full">
-        <picture className="inline-block flex-grow">
-          <img src="/headers/Logo.svg" alt="" />
-        </picture>
+        <Link className=" flex-grow" href={'/'}>
+          <picture className="inline-block">
+            <img src="/headers/Logo.svg" alt="" />
+          </picture>
+        </Link>
         <nav className="flex flex-grow items-center gap-10">
           <ListNav value="Home" />
           <PopoverList
@@ -61,26 +63,6 @@ const Header = () => {
           </picture>
         </section>
       </section>
-      <div className="">
-        <picture className="w-full">
-          <img className="w-full" src="/headers/ImagePlaceholder.svg" alt="" />
-        </picture>
-        <div className=" absolute top-[282px] flex flex-col gap-7 left-[732px] ">
-          <h1 className="flex flex-col gap-2">
-            <span className="text-8xl font-bold  animate-wiggle sec-font">
-              Listen to the{" "}
-              <mark className="bg-transparent text-[var(--color-mark-baner)]">
-                amazing
-              </mark>{" "}
-              music sound.
-            </span>
-            <span className="third-font">
-              Experience music like never before
-            </span>
-          </h1>
-          <MainButton className="px-14 w-72 py-3" value={"Shopping Now"} />
-        </div>
-      </div>
     </header>
   );
 };
