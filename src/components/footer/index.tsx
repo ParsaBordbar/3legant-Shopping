@@ -1,5 +1,10 @@
+import Link from "next/link";
+import Newsletter from "../Newsletter";
+
 const Footer = () => {
   return (
+    <>
+    <Newsletter/>
     <footer className="py-20 bg-[var(--neutral-07)] flex flex-col gap-12 items-center px-40">
       <div className="flex w-full items-center">
         <div className="flex-grow flex items-center gap-8">
@@ -11,9 +16,11 @@ const Footer = () => {
           </p>
         </div>
         <nav className="flex items-center gap-10">
-          <li className="list-none third-font text-sm leading-5 text-[var(--neutral-01)]">
-            Home
-          </li>
+          <Link href={'/'}>
+            <li className="list-none third-font text-sm leading-5 text-[var(--neutral-01)]">
+              Home
+            </li>
+          </Link>
           <li className="list-none third-font text-sm leading-5 text-[var(--neutral-01)]">
             Shop
           </li>
@@ -53,6 +60,7 @@ const Footer = () => {
         </section>
       </section>
     </footer>
+    </>
   );
 };
 
