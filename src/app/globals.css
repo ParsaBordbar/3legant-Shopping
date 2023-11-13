@@ -78,7 +78,7 @@
   --neutral-01: rgba(254, 254, 254, 1);
   --color-mark-baner: rgba(55, 125, 255, 1);
   --bg-pop-over: rgba(255, 161, 46, 0.824);
-  --bg-items-pop-over: rgba(255, 160, 44, 0.499);
+  --bg-items-pop-over: rgb(252, 185, 85);
   --box-shadow: 0px 8px 16px -8px rgba(15, 15, 15, 0.12);
 }
 

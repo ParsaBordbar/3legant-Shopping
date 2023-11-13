@@ -1,4 +1,3 @@
-"use client";
 import BrandsList from "@/components/Brands";
 import MainButton from "@/components/MainButton";
 import CartProduct from "@/components/cardProducts";
@@ -11,24 +10,9 @@ import CollecItem from "@/components/collecItems";
 import TimerItems from "@/components/timerItems";
 import DeliveryItems from "@/components/DeliveryItems";
 import Newsletter from "@/components/Newsletter";
+import NewProductsSlider from "@/components/NewPro";
 
 export default function Home() {
-  const ProductInSlider = useMemo(() => {
-    return DataProduct.map((items: TProduct) => {
-      if (Number(items.id) < 3) return;
-      return (
-        <CartProduct
-          id={items.id}
-          img={items.img}
-          name={items.name}
-          cato={items.cato}
-          price={items.price}
-          pos={items.pos}
-        />
-      );
-    });
-  }, []);
-
   return (
     <main className="flex flex-col">
       <div className="banner-one  w-full h-[721px]">
@@ -61,31 +45,7 @@ export default function Home() {
           <BrandsList img={"/brandsLogo/logo 6.svg"} />
         </section>
 
-        <div className="flex flex-col gap-12">
-          <h1 className="sec-font text-5xl font-semibold text-black leading-10">
-            New Arrivals
-          </h1>
-
-          {/* <SlideShow children={<SwiperSlide className="flex">{ProductInSlider}</SwiperSlide>} /> */}
-          <Slider anotherProp={5}>
-            {DataProduct?.map((items: TProduct) => {
-              return (
-                items.pos == "NEW" && (
-                  <SwiperSlide className="!w-fit" {...items} key={items.id}>
-                    <CartProduct
-                      id={items.id}
-                      img={items.img}
-                      name={items.name}
-                      cato={items.cato}
-                      price={items.price}
-                      pos={items.pos}
-                    />
-                  </SwiperSlide>
-                )
-              );
-            })}
-          </Slider>
-        </div>
+        <NewProductsSlider /> 
 
         <div className="flex flex-col gap-12">
           <h1 className="sec-font text-5xl font-semibold text-black leading-10">

@@ -71,7 +71,7 @@ const CartProduct = (props: TProduct) => {
           <img className="w-full h-full" src={props.img} alt="" />
         </picture>
         {show && (
-          <Link href={`/sinpro?id=${props.id}`}>
+          <Link href={`/sinpro/${props.id}`}>
             <MainButton
               className="w-[230px]  absolute bottom-4 left-4 py-2 px-6"
               value={"Add To Cart"}
