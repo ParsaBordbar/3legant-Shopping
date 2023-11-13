@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className="flex flex-col ">
       <section className="flex px-[160px] items-center py-3 w-full">
-        <Link className=" flex-grow" href={'/'}>
+        <Link className=" flex-grow" href={"/"}>
           <picture className="inline-block">
             <img src="/headers/Logo.svg" alt="" />
           </picture>
@@ -20,8 +20,12 @@ const Header = () => {
             children={
               <>
                 <PopOverItems value="Accessories" />
-                <PopOverItems value="Headband" />
-                <PopOverItems value="Earbuds" />
+                <Link className="outline-none" href={`/sortpro/headphones`}>
+                  <PopOverItems value="Headband" />
+                </Link>
+                <Link className="outline-none" href={`/sortpro/earbuds`}>
+                  <PopOverItems value="Earbuds" />
+                </Link>
               </>
             }
             value="Shop"
@@ -30,8 +34,12 @@ const Header = () => {
             className="translate-x-[2.5rem]"
             children={
               <>
-                <PopOverItems value="New Arrivals" />
-                <PopOverItems value="Best Seller" />
+                <Link className="outline-none" href={`/sortpro/NEW`}>
+                  <PopOverItems value="New Arrivals" />
+                </Link>
+                <Link className="outline-none" href={`/sortpro/HOT`}>
+                  <PopOverItems value="Best Seller" />
+                </Link>
               </>
             }
             value="Product"
