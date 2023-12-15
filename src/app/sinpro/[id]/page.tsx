@@ -10,6 +10,7 @@ const SingleProduct = ({ params }: { params: { id: string } }) => {
   const [items, setItems] = useState<TProduct>();
   const [count, setCount] = useState<number>(1);
   useEffect(() => {
+    console.log(params)
     DataProduct.map((items: TProduct) => {
       if (items.id == params.id) {
         setItems(items);
@@ -18,7 +19,7 @@ const SingleProduct = ({ params }: { params: { id: string } }) => {
   }, []);
   return (
     items && (
-      <div className="my-10 px-40">
+      <div className="my-10 min-[500px]:px-16 md:px-40">
         <section className="flex items-start gap-16">
           <picture className="w-1/2 h-[496px] inline-block rounded-2xl border-2 border-[var(--neutral-03)] overflow-hidden">
             <img

@@ -14,18 +14,17 @@ const Header = () => {
           </picture>
         </Link>
         <nav className="flex flex-grow items-center gap-10">
-          <ListNav value="Home" />
+          <ListNav link="/" value="Home" />
           <PopoverList
             className="translate-x-[3rem]"
             children={
               <>
-                <PopOverItems value="Accessories" />
-                <Link className="outline-none" href={`/sortpro/headphones`}>
-                  <PopOverItems value="Headband" />
-                </Link>
-                <Link className="outline-none" href={`/sortpro/earbuds`}>
-                  <PopOverItems value="Earbuds" />
-                </Link>
+                <PopOverItems
+                  link={`/sortpro/accessories`}
+                  value="Accessories"
+                />
+                <PopOverItems link={`/sortpro/headphones`} value="Headband" />
+                <PopOverItems link={`/sortpro/earbuds`} value="Earbuds" />
               </>
             }
             value="Shop"
@@ -34,18 +33,14 @@ const Header = () => {
             className="translate-x-[2.5rem]"
             children={
               <>
-                <Link className="outline-none" href={`/sortpro/NEW`}>
-                  <PopOverItems value="New Arrivals" />
-                </Link>
-                <Link className="outline-none" href={`/sortpro/HOT`}>
-                  <PopOverItems value="Best Seller" />
-                </Link>
+                <PopOverItems link={`/sortpro/NEW`} value="New Arrivals" />
+                <PopOverItems link={`/sortpro/HOT`} value="Best Seller" />
               </>
             }
             value="Product"
           />
 
-          <ListNav value="Contact Us" />
+          <ListNav link="" value="Contact Us" />
         </nav>
         <section className=" flex items-center gap-4">
           <picture className="inline-block w-6">
@@ -55,13 +50,15 @@ const Header = () => {
               alt=""
             />
           </picture>
-          <picture className="inline-block w-6">
-            <img
-              className="w-full h-full"
-              src="/headers/user-circle.svg"
-              alt=""
-            />
-          </picture>
+          <Link className="w-6 h-6" href={`/register/signup`}>
+            <picture className="inline-block w-full">
+              <img
+                className="w-full h-full"
+                src="/headers/user-circle.svg"
+                alt=""
+              />
+            </picture>
+          </Link>
           <picture className="inline-block w-6">
             <img
               className="w-full h-full"

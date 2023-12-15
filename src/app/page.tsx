@@ -35,28 +35,41 @@ export default function Home() {
           <MainButton className="px-14 w-72 py-3" value={"Shopping Now"} />
         </div>
       </div>
-      <div className="flex gap-12 flex-col px-40">
+      <div className="flex gap-12 flex-col min-[500px]:px-16 md:px-40">
         <section className=" flex gap-6 py-10 items-center">
-          <BrandsList img={"/brandsLogo/logo 01.svg"} />
+          {/* <BrandsList img={"/brandsLogo/logo 01.svg"} />
           <BrandsList img={"/brandsLogo/logo 02.svg"} />
           <BrandsList img={"/brandsLogo/logo 03.svg"} />
           <BrandsList img={"/brandsLogo/logo 04.svg"} />
           <BrandsList img={"/brandsLogo/logo 05.svg"} />
-          <BrandsList img={"/brandsLogo/logo 6.svg"} />
+          <BrandsList img={"/brandsLogo/logo 6.svg"} /> */}
+          
         </section>
 
-        <NewProductsSlider /> 
+        <NewProductsSlider />
 
         <div className="flex flex-col gap-12">
-          <h1 className="sec-font text-5xl font-semibold text-black leading-10">
+          <h1 className="sec-font min-[500px]:text-4xl md:text-5xl font-semibold text-black leading-10">
             Shop Collection
           </h1>
 
-          <div className="flex items-center gap-6">
-            <CollecItem img={"/collec/headphone.svg"} title={"HeadBand"} />
+          <div className="flex min-[500px]:flex-col md:flex-row items-center gap-6">
+            <CollecItem
+              link="/sortpro/headphones"
+              img={"/collec/headphone.svg"}
+              title={"HeadPhones"}
+              className="md:h-[664px]"
+            />
             <section className="flex gap-6 justify-center flex-col ">
-              <CollecItem img={"/collec/earbuds.svg"} title={"Earbuds"} />
               <CollecItem
+                className="md:h-[319px]"
+                link="/sortpro/earbuds"
+                img={"/collec/earbuds.svg"}
+                title={"Earbuds"}
+              />
+              <CollecItem
+                className="md:h-[319px]"
+                link="/sortpro/accessories"
                 img={"/collec/accessories.svg"}
                 title={"Accessories"}
               />
@@ -65,11 +78,11 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-12">
-          <h1 className="sec-font text-5xl font-semibold text-black leading-10">
+          <h1 className="sec-font w-fill min-[500px]:text-4xl md:text-5xl font-semibold text-black leading-10">
             Best Seller
           </h1>
 
-          <section className="flex items-center gap-6 flex-wrap">
+          <section className="flex justify-center items-center gap-6 flex-wrap">
             {DataProduct.map((items: TProduct) => {
               return (
                 items.pos == "HOT" && (
@@ -89,8 +102,8 @@ export default function Home() {
       </div>
 
       <div className=" mt-[6.25rem] mb-10 flex flex-col gap-10 ">
-        <div className="w-full  h-[532px] flex gap-[4.5rem] items-center   sell-banner ">
-          <picture className="inline-block h-[532px] w-1/2">
+        <div className="w-full  md:items-center md:justify-normal min-[500px]:items-center min-[500px]:justify-center  h-[532px] flex gap-[4.5rem]  sell-banner ">
+          <picture className="md:inline-block min-[500px]:hidden h-[532px] w-1/2">
             <img
               className="w-full object-cover h-full"
               src="/banners/counterSeler.svg"
@@ -126,7 +139,7 @@ export default function Home() {
           </section>
         </div>
 
-        <section className="px-40 flex items-center gap-6">
+        <section className="min-[500px]:px-16 md:px-40 justify-center min-[500px]:flex-wrap flex items-center gap-6">
           <DeliveryItems
             img={"/delivery/fastdelivery.svg"}
             title={"Free Shipping"}
@@ -150,7 +163,7 @@ export default function Home() {
         </section>
       </div>
 
-      <div className="px-40 flex flex-col gap-10 mt-10">
+      <div className="min-[500px]:px-16 md:px-40 flex flex-col gap-10 mt-10">
         <section className="flex items-center flex-col gap-4">
           <p className="uppercase third-font font-bold text-base leading-4 text-[var(--neutral-04)]">
             newsfeed
@@ -163,23 +176,21 @@ export default function Home() {
             @3legant_official
           </p>
         </section>
-        <div className="flex items-center gap-6">
-          <picture>
-            <img src="/contact/Image.svg" alt="" />
+        <div className="flex justify-center min-[500px]:flex-wrap xl:flex-nowrap items-center gap-6">
+          <picture className="min-[500px]:w-[260px] min-[500px]:h-[260px] lg:w-[312px] lg:h-[312px] ">
+            <img className="w-full  h-full" src="/contact/Image.svg" alt="" />
           </picture>
-          <picture>
-            <img src="/contact/Image1.svg" alt="" />
+          <picture className="min-[500px]:w-[260px] min-[500px]:h-[260px] lg:w-[312px] lg:h-[312px]">
+            <img className="w-full  h-full" src="/contact/Image1.svg" alt="" />
           </picture>
-          <picture>
-            <img src="/contact/Image2.svg" alt="" />
+          <picture className="min-[500px]:w-[260px] min-[500px]:h-[260px] lg:w-[312px] lg:h-[312px]">
+            <img className="w-full  h-full" src="/contact/Image2.svg" alt="" />
           </picture>
-          <picture>
-            <img src="/contact/Image3.svg" alt="" />
+          <picture className="min-[500px]:w-[260px] min-[500px]:h-[260px] lg:w-[312px] lg:h-[312px] ">
+            <img className="w-full h-full " src="/contact/Image3.svg" alt="" />
           </picture>
         </div>
       </div>
-
-      <Newsletter />
     </main>
   );
 }

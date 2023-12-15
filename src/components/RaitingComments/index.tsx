@@ -26,7 +26,7 @@ const RaitingComments = () => {
     });
   }, [show]);
   return (
-    <section className="px-40 flex flex-col gap-5">
+    <section className="min-[500px]:px-16 md:px-40 flex flex-col gap-5">
       <h1 className="sec-font font-bold text-5xl">Rating & Reviews</h1>
       <div className="flex flex-col gap-5">
         <h1 className="third-font text-xl ">
