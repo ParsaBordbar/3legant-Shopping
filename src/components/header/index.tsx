@@ -8,11 +8,11 @@ const Header = () => {
   return (
     <header className="flex flex-col ">
       <section className="flex px-[160px] items-center py-3 w-full">
-        <Link className=" flex-grow" href={"/"}>
-          <picture className="inline-block">
+        <picture className="inline-block flex-grow">
+          <Link className="" href={"/"}>
             <img src="/headers/Logo.svg" alt="" />
-          </picture>
-        </Link>
+          </Link>
+        </picture>
         <nav className="flex flex-grow items-center gap-10">
           <ListNav link="/" value="Home" />
           <PopoverList
