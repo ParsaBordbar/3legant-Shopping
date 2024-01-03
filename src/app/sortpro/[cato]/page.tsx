@@ -12,7 +12,8 @@ const SortingProducts = ({ params }: { params: { cato: string } }) => {
   console.log(DataProduct);
   useEffect(() => {
     DataProduct.map((items: TProduct) => {
-      if (items.pos == params.cato || items.cato == params.cato) {
+      const seprate = items.cato.split("-")[0];
+      if (items.pos == params.cato || seprate == params.cato) {
         findingProuct.push(items);
       }
     });
@@ -20,20 +21,23 @@ const SortingProducts = ({ params }: { params: { cato: string } }) => {
   }, []);
 
   return (
-    <div className="w-full flex items-center flex-wrap gap-7 mt-20">
-      {res.map((items: TProduct) => {
-        return (
-          <CartProduct
-            cato={items.cato}
-            name={items.name}
-            id={items.id}
-            img={items.img}
-            pos={items.pos}
-            price={items.price}
-            key={items.id}
-          />
-        );
-      })}
+    <div>
+      {/* <h1>{res && res[0].cato}</h1> */}
+      <div className="w-full flex items-center flex-wrap gap-7 mt-20">
+        {res.map((items: TProduct) => {
+          return (
+            <CartProduct
+              cato={items.cato}
+              name={items.name}
+              id={items.id}
+              img={items.img}
+              pos={items.pos}
+              price={items.price}
+              key={items.id}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
