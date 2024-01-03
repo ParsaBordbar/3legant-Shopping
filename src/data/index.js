@@ -263,7 +263,7 @@ Talking`,
   },
   {
     id: "26",
-    img: "/productsIcon/p22.svg",
+    img: "/productsIcon/p22.png",
     name: "Apple Mag Safe",
     price: 599.99,
     pos: "HOT",
