@@ -5,9 +5,6 @@ const LayoutSortProducts = ({ children }: { children: ReactNode }) => {
   return (
     <div className="mt-10 min-[500px]:px-16 md:px-40">
       {children}
-      <section>
-        
-      </section>
     </div>
   );
 };
