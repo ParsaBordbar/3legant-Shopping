@@ -6,6 +6,13 @@ export const DataProduct = [
     price: 299.99,
     pos: "NEW",
     cato: "headphones",
+    information: `Ethylene Vinyl Acetate In Ear Puds
+A Mixture Of Polypropylee And EPDM , A So-Called Thermoplastic Elastomer , In An Ear Hook
+Soft Doam , Manufactured From Chloroprene Rubber For A Stabilization Spring Band`,
+    useFull: `Audio And Video Editing
+Listening To Music
+Working Out
+Talking`,
   },
   {
     id: "2",
@@ -14,6 +21,13 @@ export const DataProduct = [
     price: 349.99,
     pos: "NEW",
     cato: "headphones",
+    information: `Ethylene Vinyl Acetate In Ear Puds
+A Mixture Of Polypropylee And EPDM , A So-Called Thermoplastic Elastomer , In An Ear Hook
+Soft Doam , Manufactured From Chloroprene Rubber For A Stabilization Spring Band`,
+    useFull: `Audio And Video Editing
+Listening To Music
+Working Out
+Talking`,
   },
   {
     id: "3",
@@ -22,6 +36,13 @@ export const DataProduct = [
     price: 149.99,
     pos: "NEW",
     cato: "headphones",
+    information: `Ethylene Vinyl Acetate In Ear Puds
+A Mixture Of Polypropylee And EPDM , A So-Called Thermoplastic Elastomer , In An Ear Hook
+Soft Doam , Manufactured From Chloroprene Rubber For A Stabilization Spring Band`,
+    useFull: `Audio And Video Editing
+Listening To Music
+Working Out
+Talking`,
   },
   {
     id: "4",
@@ -95,6 +116,13 @@ export const DataProduct = [
     price: 554.99,
     pos: "NEW",
     cato: "headphones",
+    information: `Ethylene Vinyl Acetate In Ear Puds
+A Mixture Of Polypropylee And EPDM , A So-Called Thermoplastic Elastomer , In An Ear Hook
+Soft Doam , Manufactured From Chloroprene Rubber For A Stabilization Spring Band`,
+    useFull: `Audio And Video Editing
+Listening To Music
+Working Out
+Talking`,
   },
   {
     id: "13",
@@ -111,6 +139,13 @@ export const DataProduct = [
     price: 299.99,
     pos: "HOT",
     cato: "headphones",
+    information: `Ethylene Vinyl Acetate In Ear Puds
+A Mixture Of Polypropylee And EPDM , A So-Called Thermoplastic Elastomer , In An Ear Hook
+Soft Doam , Manufactured From Chloroprene Rubber For A Stabilization Spring Band`,
+    useFull: `Audio And Video Editing
+Listening To Music
+Working Out
+Talking`,
   },
   {
     id: "15",
@@ -119,6 +154,13 @@ export const DataProduct = [
     price: 349.99,
     pos: "HOT",
     cato: "headphones",
+    information: `Ethylene Vinyl Acetate In Ear Puds
+A Mixture Of Polypropylee And EPDM , A So-Called Thermoplastic Elastomer , In An Ear Hook
+Soft Doam , Manufactured From Chloroprene Rubber For A Stabilization Spring Band`,
+    useFull: `Audio And Video Editing
+Listening To Music
+Working Out
+Talking`,
   },
   {
     id: "16",
@@ -127,6 +169,13 @@ export const DataProduct = [
     price: 149.99,
     pos: "HOT",
     cato: "headphones",
+    information: `Ethylene Vinyl Acetate In Ear Puds
+A Mixture Of Polypropylee And EPDM , A So-Called Thermoplastic Elastomer , In An Ear Hook
+Soft Doam , Manufactured From Chloroprene Rubber For A Stabilization Spring Band`,
+    useFull: `Audio And Video Editing
+Listening To Music
+Working Out
+Talking`,
   },
   {
     id: "17",
@@ -159,6 +208,13 @@ export const DataProduct = [
     price: 349.99,
     pos: "HOT",
     cato: "headphones",
+    information: `Ethylene Vinyl Acetate In Ear Puds
+A Mixture Of Polypropylee And EPDM , A So-Called Thermoplastic Elastomer , In An Ear Hook
+Soft Doam , Manufactured From Chloroprene Rubber For A Stabilization Spring Band`,
+    useFull: `Audio And Video Editing
+Listening To Music
+Working Out
+Talking`,
   },
   {
     id: "21",
@@ -167,6 +223,13 @@ export const DataProduct = [
     price: 349.99,
     pos: "HOT",
     cato: "headphones",
+    information: `Ethylene Vinyl Acetate In Ear Puds
+A Mixture Of Polypropylee And EPDM , A So-Called Thermoplastic Elastomer , In An Ear Hook
+Soft Doam , Manufactured From Chloroprene Rubber For A Stabilization Spring Band`,
+    useFull: `Audio And Video Editing
+Listening To Music
+Working Out
+Talking`,
   },
   {
     id: "22",
