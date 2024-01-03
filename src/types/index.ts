@@ -1,5 +1,10 @@
 import { ButtonHTMLAttributes, InputHTMLAttributes } from "react";
-import { FieldError, FieldValues, RegisterOptions, UseFormRegister } from "react-hook-form";
+import {
+  FieldError,
+  FieldValues,
+  RegisterOptions,
+  UseFormRegister,
+} from "react-hook-form";
 
 export type TButton = {
   id?: string;
@@ -23,7 +28,7 @@ export type RegisterType = {
 };
 
 export type TInput = {
-  register?: UseFormRegister<FieldValues> | undefined,
+  register?: UseFormRegister<FieldValues> | undefined;
   className: string;
   submode?: boolean;
   firsticon?: string;
