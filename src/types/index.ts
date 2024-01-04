@@ -19,6 +19,8 @@ export type TProduct = {
   cato: string;
   price: number;
   pos: string;
+  useFull?:string;
+  information?:string
 };
 
 export type RegisterType = {
@@ -27,8 +29,16 @@ export type RegisterType = {
   password: string;
 };
 
+export type ConatactType = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: string;
+  massage:string
+};
+
 export type TInput = {
-  register?: UseFormRegister<FieldValues> | undefined;
+  register?: any;
   className: string;
   submode?: boolean;
   firsticon?: string;
