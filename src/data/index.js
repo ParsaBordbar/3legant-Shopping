@@ -238,7 +238,7 @@ Talking`,
   {
     id: "23",
     img: "/productsIcon/p19.svg",
-    name: "Samsung Hard Disk 1TB",
+    name: "Samsung SSD 1TB",
     price: 49.99,
     pos: "HOT",
     cato: "accessories",
