@@ -6,7 +6,7 @@ import PopOverItems from "../PopOverItems";
 
 const Header = () => {
   return (
-    <header className="flex flex-col ">
+    <header className="flex mb-10 flex-col ">
       <section className="flex px-[160px] items-center py-3 w-full">
         <picture className="inline-block flex-grow">
           <Link className="" href={"/"}>
@@ -40,7 +40,7 @@ const Header = () => {
             value="Product"
           />
 
-          <ListNav link="" value="Contact Us" />
+          <ListNav link="/contact" value="Contact Us" />
         </nav>
         <section className=" flex items-center gap-4">
           <picture className="inline-block w-6">
