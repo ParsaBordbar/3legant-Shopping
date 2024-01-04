@@ -30,9 +30,11 @@ const Footer = () => {
           <li className="list-none third-font text-sm leading-5 text-[var(--neutral-01)]">
             Blog
           </li>
+          <Link href={'/contact'}>
           <li className="list-none third-font text-sm leading-5 text-[var(--neutral-01)]">
             Contact Us
           </li>
+          </Link>
         </nav>
       </div>
       <section className="border-t min-[500px]:gap-4 flex min-[500px]:flex-col lg:flex-row items-center w-full py-4">
