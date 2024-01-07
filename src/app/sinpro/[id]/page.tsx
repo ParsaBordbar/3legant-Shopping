@@ -8,12 +8,19 @@ import { useEffect, useState } from "react";
 
 const SingleProduct = ({ params }: { params: { id: string } }) => {
   const [items, setItems] = useState<TProduct>();
+  const [info, setInfo] = useState<string[]>();
+  const [use, setUse] = useState<string[]>();
   const [count, setCount] = useState<number>(1);
   useEffect(() => {
-    console.log(params)
+    console.log(params);
     DataProduct.map((items: TProduct) => {
       if (items.id == params.id) {
         setItems(items);
+        const splitInformation = items.information?.split(",");
+        const splitUse = items.useFull?.split(",");
+        console.log(splitInformation);
+        setInfo(splitInformation);
+        setUse(splitUse);
       }
     });
   }, []);
@@ -28,50 +35,48 @@ const SingleProduct = ({ params }: { params: { id: string } }) => {
               alt=""
             />
           </picture>
-          <div className="flex flex-col gap-4">
+          <div className="flex xl:w-auto md:w-[70%] lg:w-[80%] h-[496px] flex-col gap-4">
             <h1 className="font-bold third-font text-3xl">
               {items.name}
               <mark className="bg-transparent ml-1 third-font text-xl font-light uppercase text-[var(--neutral-04)]">
                 {items.cato}
               </mark>
             </h1>
+            <div className="flex items-center gap-3">
             <p className="third-font text-2xl font-semibold">${items.price}</p>
             <DefaultRating />
-            <section className="flex flex-col gap-3">
-              <h1 className="third-font font-bold">
-                Information From{" "}
-                <mark className="bg-transparent text-[var(--neutral-04)] font-light">
+            </div>
+            <section className="flex flex-grow flex-col gap-3">
+              <h1 className="third-font flex items-center gap-1 font-bold">
+                Information From
+                <mark className="bg-transparent overflow-hidden text-ellipsis whitespace-nowrap  inline-block w-[25rem] text-[var(--neutral-04)] font-light">
                   {items.name}
                 </mark>
               </h1>
-              <ul className="flex flex-col">
-                <li className="list-none capitalize ml-8 font-medium sec-font text-sm">
-                  Ethylene Vinyl Acetate in ear puds
-                </li>
-                <li className="list-none capitalize ml-8 font-medium sec-font text-sm">{`a mixture of polypropylee and EPDM , a so-called thermoplastic elastomer , in an ear hook`}</li>
-                <li className="list-none capitalize ml-8 font-medium sec-font text-sm">
-                  soft doam , manufactured from chloroprene rubber for a
-                  stabilization spring band
-                </li>
+              <ul className="flex  flex-col flex-wrap">
+                {info?.map((items: string) => {
+                  return (
+                    <li className="list-none capitalize ml-8 font-medium sec-font text-sm">
+                      {items}
+                    </li>
+                  );
+                })}
               </ul>
             </section>
-            <section className="flex flex-col gap-3">
-              <h1 className="third-font font-bold">Useful For</h1>
-              <ul className="flex flex-col">
-                <li className="list-none capitalize ml-8 font-medium sec-font text-sm">
-                  Audio and Video editing
-                </li>
-                <li className="list-none capitalize ml-8 font-medium sec-font text-sm">
-                  Listening to music
-                </li>
-                <li className="list-none capitalize ml-8 font-medium sec-font text-sm">
-                  Working out
-                </li>
-                <li className="list-none capitalize ml-8 font-medium sec-font text-sm">
-                  Talking
-                </li>
-              </ul>
-            </section>
+            {items.useFull && (
+              <section className="flex flex-grow flex-col gap-3">
+                <h1 className="third-font font-bold">Useful For</h1>
+                <ul className="flex flex-col">
+                  {use?.map((items: string) => {
+                    return (
+                      <li className="list-none capitalize ml-8 font-medium sec-font text-sm">
+                        {items}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </section>
+            )}
             <div className="flex gap-4">
               <section className="flex items-center bg-[var(--neutral-03)] w-fit p-4 rounded-2xl">
                 <picture
