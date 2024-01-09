@@ -21,9 +21,17 @@ const ContactForm = () => {
     resolver: yupResolver(RegisterSchema),
   });
 
+  const regexPhoneNumber =
+    /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{5,7}$/im;
+  const regexName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+
   const handelValueInputs = useCallback((data: ConatactType) => {
-  
-    console.log(data);
+    if (
+      regexPhoneNumber.test(data.phoneNumber) &&
+      regexName.test(data.firstName) && regexName.test(data.lastName)
+    ) {
+      console.log(data);
+    }
   }, []);
 
   return {
