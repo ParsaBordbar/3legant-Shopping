@@ -16,7 +16,7 @@ const CollecItem = (props: TCollec) => {
           {props.title}
         </p>
         <section className="flex items-center gap-1">
-          <span className="third-font">Collection</span>
+          <span className="third-font">Shop Now</span>
           <picture>
             <img src="/collec/arrow-right.svg" alt="" />
           </picture>
