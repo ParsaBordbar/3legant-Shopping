@@ -4,7 +4,7 @@ import ContactFormComponent from "@/components/contactForm";
 const ContactUs = () => {
 
   return (
-    <div className="w-full px-40 flex flex-col gap-10 ">
+    <div className="w-full mt-10 px-40 flex flex-col gap-10 ">
       <div className="flex flex-col self-start gap-2">
         <h1 className="font-bold text-3xl sec-font">Conatct US</h1>
         <p className="primary-font">
