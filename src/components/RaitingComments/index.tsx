@@ -27,14 +27,13 @@ const RaitingComments = () => {
   }, [show]);
   return (
     <section className="min-[500px]:px-16 md:px-40 flex flex-col items-center">
-      <h1 className="sec-font font-bold text-5xl">Rating & Reviews</h1>
+      <h1 className="sec-font self-start font-bold text-5xl">Rating & Reviews</h1>
       <div className="flex flex-col gap-5">
         <h1 className="third-font text-xl ">
           All Reviews - ({DataComment.length})
         </h1>
         <div className="grid md:grid-cols-2 gap-2 sm:grid-cols-1  ">
           {RenderComment}
-
         </div>
           <MainButton
             onClick={() => setShow(!show)}
