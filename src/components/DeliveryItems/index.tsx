@@ -2,11 +2,12 @@ type TDelivery = {
   img: string;
   title: string;
   desc: string;
+  className?:string
 };
 
 const DeliveryItems = (props: TDelivery) => {
   return (
-    <div className="flex w-[262px] bg-[var(--neutral-02)]  flex-col gap-4 py-12 px-8">
+    <div className={`${props.className} flex w-full bg-[var(--neutral-02)]  flex-col gap-4 py-12 px-8`}>
       <picture>
         <img src={props.img} alt="" />
       </picture>
