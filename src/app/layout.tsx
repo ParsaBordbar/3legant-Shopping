@@ -1,10 +1,12 @@
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
+import gsap from "gsap";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +20,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+ 
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -25,7 +28,11 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
-          <ToastContainer position="top-center" autoClose={1500}  progressClassName={'text-red'} />
+          <ToastContainer
+            position="top-center"
+            autoClose={1500}
+            progressClassName={"text-red"}
+          />
         </>
       </body>
     </html>
