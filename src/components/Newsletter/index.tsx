@@ -1,6 +1,7 @@
-import MainInput from "../MainInput";
+import FormJoin from "./formJoin";
 
 const Newsletter = () => {
+  
   return (
     <div className="w-full lg:bg-transparent min-[500px]:bg-[var(--neutral-03)] min-[500px]:h-[250px] md:h-[199px] lg:h-auto relative mt-10">
       <img
@@ -17,13 +18,7 @@ const Newsletter = () => {
             Sign up for deals, new products and promotions
           </p>
         </div>
-        <MainInput
-          firsticon="/social/mail.svg"
-          className={"min-[500px]:w-3/5 md:w-4/12"}
-          type="email"
-          submode={true}
-          placeholder="Email address"
-        />
+        <FormJoin/>
       </section>
     </div>
   );
