@@ -28,14 +28,14 @@ const SingleProduct = ({ params }: { params: { id: string } }) => {
     items && (
       <div className="my-10 min-[500px]:px-16 md:px-40">
         <section className="flex items-start gap-16">
-          <picture className="w-1/2 h-[496px] inline-block rounded-2xl border-2 border-[var(--neutral-03)] overflow-hidden">
+          <picture className="w-1/3 h-[496px] inline-block rounded-2xl border-2 border-[var(--neutral-03)] overflow-hidden">
             <img
               className="w-full h-full object-cover"
               src={items.img}
               alt=""
             />
           </picture>
-          <div className="flex xl:w-auto md:w-[70%] lg:w-[80%] h-[496px] flex-col gap-4">
+          <div className="flex xl:w-2/3 md:w-[70%] lg:w-[80%] h-[496px] flex-col gap-4">
             <h1 className="font-bold third-font text-3xl">
               {items.name}
               <mark className="bg-transparent ml-1 third-font text-xl font-light uppercase text-[var(--neutral-04)]">
@@ -46,7 +46,7 @@ const SingleProduct = ({ params }: { params: { id: string } }) => {
             <p className="third-font text-2xl font-semibold">${items.price}</p>
             <DefaultRating />
             </div>
-            <section className="flex flex-grow flex-col gap-3">
+            <section className={`flex  flex-col ${!items.useFull && 'flex-grow'} gap-3`}>
               <h1 className="third-font flex items-center gap-1 font-bold">
                 Information From
                 <mark className="bg-transparent overflow-hidden text-ellipsis whitespace-nowrap  inline-block w-[25rem] text-[var(--neutral-04)] font-light">
@@ -103,7 +103,7 @@ const SingleProduct = ({ params }: { params: { id: string } }) => {
                   />
                 </picture>
               </section>
-              <MainButton className="py-4 px-10 w-full" value={"Add To Cart"} />
+              <MainButton className="py-4 px-10 w-1/2" value={"Add To Cart"} />
             </div>
           </div>
         </section>
