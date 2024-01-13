@@ -35,15 +35,14 @@ export default function Home() {
           <MainButton className="px-14 w-72 py-3" value={"Shopping Now"} />
         </div>
       </div>
-      <div className="flex gap-12 flex-col min-[500px]:px-16 md:px-40">
-        <section className=" flex gap-6 py-10 items-center">
-          {/* <BrandsList img={"/brandsLogo/logo 01.svg"} />
+      <div className="grid grid-cols-1 gap-12 items-center w-[84%] mx-auto">
+        <section className=" grid grid-cols-6 justify-center my-2 gap-8">
+          <BrandsList img={"/brandsLogo/logo 01.svg"} />
           <BrandsList img={"/brandsLogo/logo 02.svg"} />
           <BrandsList img={"/brandsLogo/logo 03.svg"} />
           <BrandsList img={"/brandsLogo/logo 04.svg"} />
           <BrandsList img={"/brandsLogo/logo 05.svg"} />
-          <BrandsList img={"/brandsLogo/logo 6.svg"} /> */}
-          
+          <BrandsList img={"/brandsLogo/logo 6.svg"} />
         </section>
 
         <NewProductsSlider />
@@ -53,27 +52,26 @@ export default function Home() {
             Shop Collection
           </h1>
 
-          <div className="flex min-[500px]:flex-col md:flex-row items-center gap-6">
+          <div className="grid grid-cols-2 gap-6">
             <CollecItem
               link="/sortpro/headphones"
               img={"/collec/headphone.svg"}
               title={"HeadPhones"}
-              className="md:h-[664px]"
+              className="md:h-[664px] row-span-2"
             />
-            <section className="flex gap-6 justify-center flex-col ">
-              <CollecItem
-                className="md:h-[319px]"
-                link="/sortpro/earbuds"
-                img={"/collec/earbuds.svg"}
-                title={"Earbuds"}
-              />
-              <CollecItem
-                className="md:h-[319px]"
-                link="/sortpro/accessories"
-                img={"/collec/accessories.svg"}
-                title={"Accessories"}
-              />
-            </section>
+
+            <CollecItem
+              className="md:h-[319px]"
+              link="/sortpro/earbuds"
+              img={"/collec/earbuds.svg"}
+              title={"Earbuds"}
+            />
+            <CollecItem
+              className="md:h-[319px]"
+              link="/sortpro/accessories"
+              img={"/collec/accessories.svg"}
+              title={"Accessories"}
+            />
           </div>
         </div>
 
@@ -139,11 +137,12 @@ export default function Home() {
           </section>
         </div>
 
-        <section className="min-[500px]:px-16 md:px-40 justify-center min-[500px]:flex-wrap flex items-center gap-6">
+        <section className="grid min-[1000px]:grid-cols-4 md:grid-cols-3 min-[500px]:grid-cols-2  w-[84%] mx-auto gap-6">
           <DeliveryItems
             img={"/delivery/fastdelivery.svg"}
             title={"Free Shipping"}
             desc={"Order above $200"}
+            className="md:col-span-2 min-[500px]:col-span-1 min-[1000px]:col-span-1"
           />
           <DeliveryItems
             img={"/delivery/money.svg"}
@@ -151,19 +150,21 @@ export default function Home() {
             desc={"30 days guarantee"}
           />
           <DeliveryItems
-            img={"/delivery/lock 01.svg"}
-            title={"Secure Payments"}
-            desc={"Secured by Stripe"}
-          />
-          <DeliveryItems
             img={"/delivery/call.svg"}
             title={"24/7 Support"}
             desc={"Phone and Email support"}
+            className=""
+          />
+          <DeliveryItems
+            img={"/delivery/lock 01.svg"}
+            title={"Secure Payments"}
+            desc={"Secured by Stripe"}
+            className="md:col-span-2 min-[500px]:col-span-1 min-[1000px]:col-span-1"
           />
         </section>
       </div>
 
-      <div className="min-[500px]:px-16 md:px-40 flex flex-col gap-10 mt-10">
+      <div className=" flex flex-col gap-10 mt-10">
         <section className="flex items-center flex-col gap-4">
           <p className="uppercase third-font font-bold text-base leading-4 text-[var(--neutral-04)]">
             newsfeed
@@ -176,17 +177,17 @@ export default function Home() {
             @3legant_official
           </p>
         </section>
-        <div className="flex justify-center min-[500px]:flex-wrap xl:flex-nowrap items-center gap-6">
-          <picture className="min-[500px]:w-[260px] min-[500px]:h-[260px] lg:w-[312px] lg:h-[312px] ">
+        <div className="grid min-[1000px]:grid-cols-4 md:grid-cols-2 gap-6 w-[84%] mx-auto">
+          <picture className="">
             <img className="w-full  h-full" src="/contact/Image.svg" alt="" />
           </picture>
-          <picture className="min-[500px]:w-[260px] min-[500px]:h-[260px] lg:w-[312px] lg:h-[312px]">
+          <picture className="">
             <img className="w-full  h-full" src="/contact/Image1.svg" alt="" />
           </picture>
-          <picture className="min-[500px]:w-[260px] min-[500px]:h-[260px] lg:w-[312px] lg:h-[312px]">
+          <picture className="">
             <img className="w-full  h-full" src="/contact/Image2.svg" alt="" />
           </picture>
-          <picture className="min-[500px]:w-[260px] min-[500px]:h-[260px] lg:w-[312px] lg:h-[312px] ">
+          <picture className="">
             <img className="w-full h-full " src="/contact/Image3.svg" alt="" />
           </picture>
         </div>
