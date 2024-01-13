@@ -35,7 +35,7 @@ const ContactForm = () => {
       console.log(data);
       toast.success("your massage send");
     }else{
-      toast.error("something wrong!");
+      toast.error("something goes wrong!");
 
     }
   }, []);
