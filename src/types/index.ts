@@ -29,6 +29,10 @@ export type RegisterType = {
   password: string;
 };
 
+export type JoinType = {
+  email: string;
+};
+
 export type ConatactType = {
   firstName: string;
   lastName: string;
