@@ -52,12 +52,12 @@ export default function Home() {
             Shop Collection
           </h1>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid min-[768px]:grid-cols-2 sm:grid-cols-1  gap-6">
             <CollecItem
               link="/sortpro/headphones"
               img={"/collec/headphone.svg"}
               title={"HeadPhones"}
-              className="md:h-[664px] row-span-2"
+              className="md:h-[316px] sm:col-span-1 min-[768px]:row-span-2"
             />
 
             <CollecItem
