@@ -22,9 +22,10 @@ const Header = () => {
                 <PopOverItems
                   link={`/sortpro/accessories`}
                   value="Accessories"
+                  img="/icons/settings_input_hdmi.svg"
                 />
-                <PopOverItems link={`/sortpro/headphones`} value="Headband" />
-                <PopOverItems link={`/sortpro/earbuds`} value="Earbuds" />
+                <PopOverItems img="/icons/headphones.svg" link={`/sortpro/headphones`} value="Headband" />
+                <PopOverItems img="/icons/earbuds.svg" link={`/sortpro/earbuds`} value="Earbuds" />
               </>
             }
             value="Shop"
@@ -33,8 +34,8 @@ const Header = () => {
             className="translate-x-[2.5rem]"
             children={
               <>
-                <PopOverItems link={`/sortpro/NEW`} value="New Arrivals" />
-                <PopOverItems link={`/sortpro/HOT`} value="Best Seller" />
+                <PopOverItems img="/icons/package_2.svg" link={`/sortpro/NEW`} value="New Arrivals" />
+                <PopOverItems img="/icons/kid_star.svg" link={`/sortpro/HOT`} value="Best Seller" />
               </>
             }
             value="Product"
