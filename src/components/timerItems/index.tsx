@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState, useEffect } from "react";
 
 type TTimer = {
@@ -36,7 +36,9 @@ const TimerItems = (props: TTimer) => {
         {timer < 10 ? "0" + timer : timer}
       </h1>
 
-      <p className="third-font text-xs leading-5 text-[var(--neutral-07)]">{props.desc}</p>
+      <p className="third-font text-xs leading-5 text-[var(--neutral-07)]">
+        {props.desc}
+      </p>
     </div>
   );
 };
