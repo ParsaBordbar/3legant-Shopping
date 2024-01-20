@@ -19,7 +19,7 @@ export default function Home() {
         {/* <picture className="w-full">
           <img className="w-full" src="/banners/ImagePlaceholder.svg" alt="" />
         </picture> */}
-        <div className=" absolute lg:top-1/2 lg:left-1/2  min-[1321px]:top-[282px] flex flex-col gap-7 min-[1321px]:left-[732px] ">
+        <div className=" absolute lg:top-1/2 lg:left-[40%] text-lg  min-[1321px]:top-[282px] flex flex-col gap-7 min-[1321px]:left-[732px] ">
           <h1 className="flex flex-col gap-2">
             <span className="text-8xl font-bold  animate-wiggle sec-font">
               Listen to the{" "}
@@ -48,16 +48,16 @@ export default function Home() {
         <NewProductsSlider />
 
         <div className="flex flex-col gap-12">
-          <h1 className="sec-font min-[500px]:text-4xl md:text-5xl font-semibold text-black leading-10">
+          <h1 className="sec-font min-[100px]:text-4xl md:text-5xl font-semibold text-black leading-10">
             Shop Collection
           </h1>
 
-          <div className="grid min-[768px]:grid-cols-2 sm:grid-cols-1  gap-6">
+          <div className="grid min-[900px]:grid-cols-2 100px:grid-cols-1  gap-6">
             <CollecItem
               link="/sortpro/headphones"
               img={"/collec/headphone.svg"}
               title={"HeadPhones"}
-              className="md:h-[316px] sm:col-span-1 min-[768px]:row-span-2"
+              className="min-[900px]:h-[663px] 100px:h-[319px] 100px:col-span-1 min-[900px]:row-span-2"
             />
 
             <CollecItem
@@ -76,7 +76,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-12">
-          <h1 className="sec-font w-fill min-[500px]:text-4xl md:text-5xl font-semibold text-black leading-10">
+          <h1 className="sec-font w-fill min-[100px]:text-4xl md:text-5xl font-semibold text-black leading-10">
             Best Seller
           </h1>
 
@@ -100,8 +100,8 @@ export default function Home() {
       </div>
 
       <div className=" mt-[6.25rem] mb-10 flex flex-col gap-10 ">
-        <div className="w-full  md:items-center md:justify-normal min-[500px]:items-center min-[500px]:justify-center  h-[532px] flex gap-[4.5rem]  sell-banner ">
-          <picture className="md:inline-block min-[500px]:hidden h-[532px] w-1/2">
+        <div className="w-full  md:items-center md:justify-normal min-[100px]:items-center min-[100px]:justify-center  h-[532px] flex gap-[4.5rem]  sell-banner ">
+          <picture className="md:inline-block min-[100px]:hidden h-[532px] w-1/2">
             <img
               className="w-full object-cover h-full"
               src="/banners/counterSeler.svg"
@@ -137,12 +137,12 @@ export default function Home() {
           </section>
         </div>
 
-        <section className="grid min-[1000px]:grid-cols-4 md:grid-cols-3 min-[500px]:grid-cols-2  w-[84%] mx-auto gap-6">
+        <section className="grid min-[1000px]:grid-cols-4 md:grid-cols-3 min-[100px]:grid-cols-1 sm:grid-cols-2 w-[84%] mx-auto gap-6">
           <DeliveryItems
             img={"/delivery/fastdelivery.svg"}
             title={"Free Shipping"}
             desc={"Order above $200"}
-            className="md:col-span-2 min-[500px]:col-span-1 min-[1000px]:col-span-1"
+            className="md:col-span-2 min-[100px]:col-span-1 min-[1000px]:col-span-1"
           />
           <DeliveryItems
             img={"/delivery/money.svg"}
@@ -159,7 +159,7 @@ export default function Home() {
             img={"/delivery/lock 01.svg"}
             title={"Secure Payments"}
             desc={"Secured by Stripe"}
-            className="md:col-span-2 min-[500px]:col-span-1 min-[1000px]:col-span-1"
+            className="md:col-span-2 min-[100px]:col-span-1 min-[1000px]:col-span-1"
           />
         </section>
       </div>
@@ -177,7 +177,7 @@ export default function Home() {
             @3legant_official
           </p>
         </section>
-        <div className="grid min-[1000px]:grid-cols-4 md:grid-cols-2 gap-6 w-[84%] mx-auto">
+        <div className="grid min-[1000px]:grid-cols-4 sm:grid-cols-2 min-[100px]:grid-cols-1 gap-6 w-[84%] mx-auto">
           <picture className="">
             <img className="w-full  h-full" src="/contact/Image.svg" alt="" />
           </picture>
