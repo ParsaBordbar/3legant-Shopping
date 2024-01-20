@@ -26,16 +26,16 @@ const SingleProduct = ({ params }: { params: { id: string } }) => {
   }, []);
   return (
     items && (
-      <div className="my-10 min-[500px]:px-16 md:px-40">
-        <section className="flex items-start gap-16">
-          <picture className="w-1/3 h-[496px] inline-block rounded-2xl border-2 border-[var(--neutral-03)] overflow-hidden">
+      <div className="my-10  ">
+        <section className="grid sm:grid-cols-1 min-[940px]:grid-cols-5 gap-10">
+          <picture className="w-full min-[940px]:col-span-2 h-[496px] inline-block rounded-2xl border-2 border-[var(--neutral-03)] overflow-hidden">
             <img
               className="w-full h-full object-cover"
               src={items.img}
               alt=""
             />
           </picture>
-          <div className="flex xl:w-2/3 md:w-[70%] lg:w-[80%] h-[496px] flex-col gap-4">
+          <div className="flex min-[940px]:col-span-3 w-full  h-[496px] flex-col gap-4">
             <h1 className="font-bold third-font text-3xl">
               {items.name}
               <mark className="bg-transparent ml-1 third-font text-xl font-light uppercase text-[var(--neutral-04)]">
@@ -47,11 +47,8 @@ const SingleProduct = ({ params }: { params: { id: string } }) => {
             <DefaultRating />
             </div>
             <section className={`flex  flex-col ${!items.useFull && 'flex-grow'} gap-3`}>
-              <h1 className="third-font flex items-center gap-1 font-bold">
-                Information From
-                <mark className="bg-transparent overflow-hidden text-ellipsis whitespace-nowrap  inline-block w-[25rem] text-[var(--neutral-04)] font-light">
-                  {items.name}
-                </mark>
+              <h1 className="third-font font-bold">
+                Information
               </h1>
               <ul className="flex  flex-col flex-wrap">
                 {info?.map((items: string) => {
@@ -78,32 +75,8 @@ const SingleProduct = ({ params }: { params: { id: string } }) => {
               </section>
             )}
             <div className="flex gap-4">
-              <section className="flex items-center bg-[var(--neutral-03)] w-fit p-4 rounded-2xl">
-                <picture
-                  onClick={() => setCount(count - 1)}
-                  className="cursor-pointer inline-block w-6 h-6 mx-4"
-                >
-                  <img
-                    className="w-full h-full"
-                    src="/icons/mathMinusIcon.svg"
-                    alt=""
-                  />
-                </picture>
-                <p className="border-l border-r text-2xl border-[var(--neutral-04)] px-4">
-                  {count}
-                </p>
-                <picture
-                  onClick={() => setCount(count + 1)}
-                  className="cursor-pointer inline-block w-6 h-6 mx-4"
-                >
-                  <img
-                    className="w-full h-full"
-                    src="/icons/plusLineIcon.svg"
-                    alt=""
-                  />
-                </picture>
-              </section>
-              <MainButton className="py-4 px-10 w-1/2" value={"Add To Cart"} />
+             
+              <MainButton className="py-4 px-10 w-full" value={"Add To Cart"} />
             </div>
           </div>
         </section>
