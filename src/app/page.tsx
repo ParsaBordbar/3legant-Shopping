@@ -36,7 +36,7 @@ export default function Home() {
         </div>
       </div>
       <div className="grid grid-cols-1 gap-12 items-center w-[84%] mx-auto">
-        <section className=" grid grid-cols-6 justify-center my-2 gap-8">
+        <section className=" flex flex-wrap justify-center  my-2 gap-8">
           <BrandsList img={"/brandsLogo/logo 01.svg"} />
           <BrandsList img={"/brandsLogo/logo 02.svg"} />
           <BrandsList img={"/brandsLogo/logo 03.svg"} />
