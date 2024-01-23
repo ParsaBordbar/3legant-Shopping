@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import ListNav from "../ListNav";
 import MainButton from "../MainButton";
@@ -6,14 +7,14 @@ import PopOverItems from "../PopOverItems";
 
 const Header = () => {
   return (
-    <header className="flex flex-col ">
-      <section className="flex px-[160px] items-center py-3 w-full">
-        <picture className="inline-block flex-grow">
+    <header className="flex flex-col  h-10">
+      <section className="flex px-[160px] h-full items-center py-3 w-full">
+        <picture className="inline-block  flex-grow">
           <Link className="" href={"/"}>
             <img src="/headers/Logo.svg" alt="" />
           </Link>
         </picture>
-        <nav className="flex flex-grow items-center gap-10">
+        <nav className="min-[400px]:hidden lg:flex flex-grow items-center gap-10">
           <ListNav link="/" value="Home" />
           <PopoverList
             className="translate-x-[3rem]"
@@ -24,8 +25,16 @@ const Header = () => {
                   value="Accessories"
                   img="/icons/settings_input_hdmi.svg"
                 />
-                <PopOverItems img="/icons/headphones.svg" link={`/sortpro/headphones`} value="Headband" />
-                <PopOverItems img="/icons/earbuds.svg" link={`/sortpro/earbuds`} value="Earbuds" />
+                <PopOverItems
+                  img="/icons/headphones.svg"
+                  link={`/sortpro/headphones`}
+                  value="Headband"
+                />
+                <PopOverItems
+                  img="/icons/earbuds.svg"
+                  link={`/sortpro/earbuds`}
+                  value="Earbuds"
+                />
               </>
             }
             value="Shop"
@@ -34,8 +43,16 @@ const Header = () => {
             className="translate-x-[2.5rem]"
             children={
               <>
-                <PopOverItems img="/icons/package_2.svg" link={`/sortpro/NEW`} value="New Arrivals" />
-                <PopOverItems img="/icons/kid_star.svg" link={`/sortpro/HOT`} value="Best Seller" />
+                <PopOverItems
+                  img="/icons/package_2.svg"
+                  link={`/sortpro/NEW`}
+                  value="New Arrivals"
+                />
+                <PopOverItems
+                  img="/icons/kid_star.svg"
+                  link={`/sortpro/HOT`}
+                  value="Best Seller"
+                />
               </>
             }
             value="Product"
