@@ -23,6 +23,7 @@ export default function RootLayout({
  
   return (
     <html lang="en">
+      <title>3legant</title>
       <body className={inter.className}>
         <>
           <Header />
