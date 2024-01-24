@@ -43,13 +43,17 @@ const SingleProduct = ({ params }: { params: { id: string } }) => {
               </mark>
             </h1>
             <div className="flex items-center gap-3">
-            <p className="third-font text-2xl font-semibold">${items.price}</p>
-            <DefaultRating />
+              <p className="third-font text-2xl font-semibold">
+                ${items.price}
+              </p>
+              <DefaultRating />
             </div>
-            <section className={`flex  flex-col ${!items.useFull && 'flex-grow'} gap-3`}>
-              <h1 className="third-font font-bold">
-                Information
-              </h1>
+            <section
+              className={`flex  flex-col ${
+                !items.useFull && "flex-grow"
+              } gap-3`}
+            >
+              <h1 className="third-font font-bold">Information</h1>
               <ul className="flex  flex-col flex-wrap">
                 {info?.map((items: string) => {
                   return (
@@ -75,8 +79,8 @@ const SingleProduct = ({ params }: { params: { id: string } }) => {
               </section>
             )}
             <div className="flex gap-4">
-             
-              <MainButton className="py-4 px-10 w-full" value={"Add To Cart"} />
+              <MainButton imgLink="/icons/heart-black.svg" className="py-4 bg-white border-2 border-black !text-black px-10 w-full" value={"Wishlist"} />
+              <MainButton imgLink="/icons/shopping-bag-white.svg" className="py-4 px-10 w-full" value={"Add To Cart"} />
             </div>
           </div>
         </section>
