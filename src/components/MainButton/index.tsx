@@ -7,7 +7,9 @@ const MainButton = (props: TButton) => {
       className={`${props.className} third-font bg-[var(--bg-btn)] text-white rounded-lg flex justify-center items-center `}
     >
       {props.imgLink && (
-        <img src={props.imgLink} className="mr-1" alt={props.value} />
+        <picture className="mr-1 inline-block w-6 h-6">
+          <img src={props.imgLink} className=" w-full h-full" alt={props.value} />
+        </picture>
       )}
       {props.value}
     </button>
