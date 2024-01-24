@@ -10,6 +10,7 @@ export type TButton = {
   id?: string;
   value?: string;
   className?: string;
+  imgLink?:string
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export type TProduct = {
