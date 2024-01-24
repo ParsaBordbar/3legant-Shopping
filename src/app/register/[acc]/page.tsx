@@ -8,7 +8,7 @@ import AuthSignUpAndLoginForm from "../useRegister";
 
 const SignUpAndLoginPage = ({ params }: { params: { acc: string } }) => {
   const { errors, handleSubmit, handelValueInputs, register } =
-  AuthSignUpAndLoginForm();
+    AuthSignUpAndLoginForm();
   useEffect(() => {
     console.log(errors);
   }, []);
@@ -49,7 +49,7 @@ const SignUpAndLoginPage = ({ params }: { params: { acc: string } }) => {
       >
         {params.acc == "signup" && (
           <MainInput
-            firsticon="/icons/business-card-icon.svg"
+            firsticon="/icons/signature.svg"
             placeholder="Your Name"
             register={register("name")}
             className={" w-4/5"}
@@ -74,7 +74,7 @@ const SignUpAndLoginPage = ({ params }: { params: { acc: string } }) => {
             placeholder="Password"
             id="pass"
             endicontwo="/icons/hide-private-hidden-icon.svg"
-            firsticon="/icons/password-icon.svg"
+            firsticon="/icons/vpn_key.svg"
             register={register("password")}
             endicon="/icons/eye-look-icon.svg"
             className={" w-4/5"}
@@ -109,6 +109,7 @@ const SignUpAndLoginPage = ({ params }: { params: { acc: string } }) => {
         <input type="password" {...register("password")} id="" /> */}
         <MainButton
           type="submit"
+          imgLink="/icons/login-white.svg"
           className="p-2 cursor-pointer w-4/5"
           value={params.acc == "signup" ? "Sign UP" : "Login"}
         />
