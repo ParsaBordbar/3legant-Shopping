@@ -14,7 +14,7 @@ const RaitingComments = () => {
         if (items.id >= "7") return;
       }
       return (
-        <div className="py-7 flex flex-col h-[270px] justify-between w-full px-8 rounded-2xl bg-[var(--neutral-02)]">
+        <div className="py-7 flex flex-col sm:h-fit md:h-[270px] justify-between w-full px-8 rounded-2xl bg-[var(--neutral-02)]">
           <div className="flex flex-col gap-3">
             <DefaultRating />
             <h1 className="third-font font-semibold text-2xl">{items.ID}</h1>
@@ -37,7 +37,7 @@ const RaitingComments = () => {
         </div>
           <MainButton
             onClick={() => setShow(!show)}
-            className="w-1/4 place-self-center p-3"
+            className="w-1/4 place-self-center text-sm p-3"
             value={show ? "Show Less" : "Show More"}
           />
       </div>
