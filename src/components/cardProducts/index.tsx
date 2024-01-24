@@ -23,8 +23,8 @@ const CartProduct = (props: TProduct) => {
             <picture className="inline-block drop-shadow top-4 left-4 cursor-pointer rounded-full p-1.5 bg-white shadow-[var(--box-shadow)]">
               <img
                 className="overflow-hidden"
-                src="/productsIcon/heart.svg"
                 alt={props.name}
+                src="/productsIcon/heart.svg"
               />
             </picture>
           )}
