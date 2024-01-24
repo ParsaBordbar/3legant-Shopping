@@ -14,44 +14,6 @@ const CartProduct = (props: TProduct) => {
       onMouseLeave={() => setShow(false)}
       className="flex gap-3 w-[262px] flex-col"
     >
-      {/* <section className="flex w-full h-[349px] flex-col bg-[#F3F5F7] p-4 relative">
-        <div className=" flex items-center justify-between  ">
-          <p className="uppercase font-bold rounded bg-white py-1 px-[14px] third-font">
-            {props.pos}
-          </p>
-          {show && (
-            <picture className="inline-block cursor-pointer rounded-full p-1.5 bg-white shadow-[var(--box-shadow)]">
-              <img
-                className="overflow-hidden"
-                src="/productsIcon/heart.svg"
-                alt=""
-              />
-            </picture>
-          )}
-        </div>
-        <div className="w-full">
-          <picture className=" inline-block">
-            <img src={props.img} alt="" />
-          </picture>
-          {show && (
-            <MainButton
-              className="w-[230px] absolute bottom-[16px] py-2 px-6"
-              value={"Add To Cart"}
-            />
-          )}
-        </div>
-      </section>
-      <div className="flex flex-col w-full gap-1">
-        <DefaultRating />
-        <h1 className="third-font font-semibold leading-6 text-base">
-          {props.name}
-        </h1>
-        <h1 className="third-font leading-6 text-base">
-          {props.cato}
-        </h1>
-        <p className="third-font font-semibold text-sm">${props.price}</p>
-      </div> */}
-
       <section className="h-[349px] relative">
         <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
           <p className=" uppercase cursor-default px-[14px] font-bold py-1 rounded bg-white text-base third-font">
@@ -62,7 +24,7 @@ const CartProduct = (props: TProduct) => {
               <img
                 className="overflow-hidden"
                 src="/productsIcon/heart.svg"
-                alt=""
+                alt={props.name}
               />
             </picture>
           )}
