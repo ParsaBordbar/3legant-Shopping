@@ -7,10 +7,6 @@ import Link from "next/link";
 
 const CartProduct = (props: TProduct) => {
   const [show, setShow] = useState<boolean>(false);
-  console.log("render");
-  useEffect(() => {
-    console.log(show);
-  }, [show]);
 
   const ButtonProduct = useMemo(() => {
     return (
