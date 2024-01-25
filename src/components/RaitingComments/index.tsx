@@ -37,6 +37,7 @@ const RaitingComments = () => {
         </div>
           <MainButton
             onClick={() => setShow(!show)}
+            imgLink=""
             className="w-1/4 place-self-center text-sm p-3"
             value={show ? "Show Less" : "Show More"}
           />

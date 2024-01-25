@@ -5,7 +5,7 @@ const CollecItem = (props: TCollec) => {
   return (
     <Link
       href={props.link ?? "/"}
-      className={`relative group min-[500px]:h-[223px] md:w-auto min-[500px]:w-[25rem] transition-all ease-in-out duration-300 hover:border-zinc-300 border-2 cursor-pointer border-transparent ${props.className}`}
+      className={`relative group min-[500px]:h-[223px] md:w-auto min-[500px]:w-full transition-all ease-in-out duration-300 hover:border-zinc-300 border-2 cursor-pointer border-transparent ${props.className}`}
     >
       <picture className="inline-block w-full h-full">
         <img className=" h-full object-cover w-full" src={props.img} alt="" />
