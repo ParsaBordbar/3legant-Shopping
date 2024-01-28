@@ -7,12 +7,14 @@ import {
   Avatar,
   Typography,
 } from "@material-tailwind/react";
+import Link from "next/link";
 import { ReactNode, useState } from "react";
 
 const PopoverList = (props: {
   value: string;
   children: ReactNode;
   className?: string;
+  mainLink: string;
 }) => {
   const [openPopover, setOpenPopover] = useState(false);
 
@@ -24,15 +26,15 @@ const PopoverList = (props: {
   return (
     <Popover open={openPopover} handler={setOpenPopover}>
       <PopoverHandler {...triggers}>
-        <Button
+        <Link
+          href={props.mainLink}
           className="font-semibold border-none text-black outline-none text-sm p-1 flex items-center capitalize gap-2 primary-font"
-          variant="text"
         >
           {props.value}
           <picture className="inline-block ">
             <img src="/headers/chevron-down.svg" alt="" />
           </picture>
-        </Button>
+        </Link>
       </PopoverHandler>
       <PopoverContent
         {...triggers}
