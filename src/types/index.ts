@@ -44,7 +44,7 @@ export type ConatactType = {
 
 export type TInput = {
   register?: any;
-  className: string;
+  className?: string;
   submode?: boolean;
   firsticon?: string;
   endicon?: string;
