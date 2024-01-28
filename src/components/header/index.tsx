@@ -17,6 +17,7 @@ const Header = () => {
         <nav className="min-[400px]:hidden lg:flex flex-grow items-center gap-10">
           <ListNav link="/" value="Home" />
           <PopoverList
+            mainLink=""
             className="translate-x-[3rem]"
             children={
               <>
@@ -40,6 +41,7 @@ const Header = () => {
             value="Shop"
           />
           <PopoverList
+            mainLink="/product/main"
             className="translate-x-[2.5rem]"
             children={
               <>
