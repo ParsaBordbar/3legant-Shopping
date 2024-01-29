@@ -1,6 +1,6 @@
 "use client";
 import MainInput from "@/components/MainInput";
-import ValidJoiningData from "../useValid";
+import ValidJoiningData from "./useValid";
 
 const FormJoin = () => {
   const { errors, handelValueInputs, handleSubmit, register } =
