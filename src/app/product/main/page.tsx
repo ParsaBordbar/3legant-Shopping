@@ -1,9 +1,11 @@
 "use client";
+import useAuth from "@/Hooks/useAuth";
 import CartProduct from "@/components/cardProducts";
 import { DataProduct } from "@/data";
 import { useCallback } from "react";
 
 const MainRoute = () => {
+  useAuth()
   const GetAllData = useCallback(() => {
     return DataProduct.map((items) => {
       return (

@@ -21,7 +21,7 @@ const SortingProducts = ({ params }: { params: { cato: string } }) => {
   }, []);
 
   return (
-      <div className="w-full flex items-center justify-center flex-wrap gap-6 ">
+      <div className="w-full flex items-center justify-between flex-wrap gap-6 ">
         {res.map((items: TProduct) => {
           return (
             <CartProduct
