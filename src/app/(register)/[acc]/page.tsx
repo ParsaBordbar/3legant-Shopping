@@ -2,7 +2,7 @@
 import MainButton from "@/components/MainButton";
 import MainInput from "@/components/MainInput";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import ErrorsValidItems from "@/components/ErrorsValidItems";
 import AuthSignUpAndLoginForm from "../useRegister";
 
@@ -14,33 +14,41 @@ const SignUpAndLoginPage = ({ params }: { params: { acc: string } }) => {
   }, []);
   console.log(errors);
 
+  const ChoeseTitle = useCallback(() => {
+    if (params.acc == "signup") {
+      return (
+        <p className="third-font text-base">
+          Already have an account?
+          <Link
+            href={`/signin`}
+            className="bg-transparent ml-1 font-bold leading-7 text-[var(--green)]"
+          >
+            Sign in
+          </Link>
+        </p>
+      );
+    } else {
+      return (
+        <p className="third-font text-base">
+          Don’t have an accout yet?
+          <Link
+            href={`/signup`}
+            className="bg-transparent ml-1 font-bold leading-7 text-[var(--green)]"
+          >
+            Sign Up
+          </Link>
+        </p>
+      );
+    }
+  }, []);
+
   return (
     <div className="md:w-1/2 min-[400px]:w-full pl-20 h-[92%] flex flex-col justify-start py-7 items-start gap-8">
       <div className="w-full flex flex-col gap-6">
         <h1 className="capitalize sec-font text-5xl font-medium leading-10 text-[var(--neutral-07)]">
           {params.acc}
         </h1>
-        {params.acc == "signup" ? (
-          <p className="third-font text-base">
-            Already have an account?
-            <Link
-              href={`/register/signin`}
-              className="bg-transparent ml-1 font-bold leading-7 text-[var(--green)]"
-            >
-              Sign in
-            </Link>
-          </p>
-        ) : (
-          <p className="third-font text-base">
-            Don’t have an accout yet?
-            <Link
-              href={`/register/signup`}
-              className="bg-transparent ml-1 font-bold leading-7 text-[var(--green)]"
-            >
-              Sign Up
-            </Link>
-          </p>
-        )}
+        {ChoeseTitle()}
       </div>
       <form
         onSubmit={handleSubmit(handelValueInputs)}
