@@ -1,7 +1,7 @@
 "use client";
-import ContactForm from "@/app/contact/useContatct";
 import MainInput from "../MainInput";
 import MainButton from "../MainButton";
+import ContactForm from "./useContect";
 
 const ContactFormComponent = () => {
   const { register, handelValueInputs, handleSubmit } = ContactForm();
