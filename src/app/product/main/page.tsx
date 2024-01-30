@@ -4,8 +4,7 @@ import CartProduct from "@/components/cardProducts";
 import { DataProduct } from "@/data";
 import { useCallback } from "react";
 
-const MainRoute = () => {
-  useAuth()
+const MainData = () => {
   const GetAllData = useCallback(() => {
     return DataProduct.map((items) => {
       return (
@@ -26,4 +25,4 @@ const MainRoute = () => {
   return GetAllData();
 };
 
-export default MainRoute;
+export default MainData;
