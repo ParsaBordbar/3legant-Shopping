@@ -4,8 +4,38 @@ import ListNav from "../ListNav";
 import MainButton from "../MainButton";
 import PopoverList from "../PopOver";
 import PopOverItems from "../PopOverItems";
+import { useEffect, useMemo, useState } from "react";
+import Cookies from "js-cookie";
+import UserToken from "../UserToken";
 
 const Header = () => {
+  const [hasCookie, setHasCookie] = useState<boolean>();
+  useEffect(() => {
+    Cookies.get("token") ? setHasCookie(true) : setHasCookie(false);
+  }, []);
+  console.log(hasCookie);
+  const CheckingCookies = useMemo(() => {
+    if (hasCookie) {
+      return (
+        <Link href={"/account/dashboard"}>
+          <UserToken className="px-1.5" mode="standard" />
+        </Link>
+      );
+    } else {
+      return (
+        <Link className="w-6 h-6" href={`/signup`}>
+          <picture className="inline-block w-full">
+            <img
+              className="w-full h-full"
+              src="/headers/user-circle.svg"
+              alt=""
+            />
+          </picture>
+        </Link>
+      );
+    }
+  }, [hasCookie]);
+
   return (
     <header className="flex flex-col  h-12">
       <section className="flex px-[160px] h-full items-center py-3 w-full">
@@ -70,15 +100,7 @@ const Header = () => {
               alt=""
             />
           </picture>
-          <Link className="w-6 h-6" href={`/signup`}>
-            <picture className="inline-block w-full">
-              <img
-                className="w-full h-full"
-                src="/headers/user-circle.svg"
-                alt=""
-              />
-            </picture>
-          </Link>
+          {CheckingCookies}
           <picture className="inline-block w-6">
             <img
               className="w-full h-full"
