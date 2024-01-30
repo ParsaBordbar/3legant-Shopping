@@ -52,12 +52,12 @@ export default function Home() {
             Shop Collection
           </h1>
 
-          <div className="grid min-[900px]:grid-cols-2 100px:grid-cols-1  gap-6">
+          <div className="grid min-[900px]:grid-cols-2 100px:grid-cols-1  gap-2">
             <CollecItem
               link="/sortpro/headphones"
               img={"/collec/headphone.svg"}
               title={"HeadPhones"}
-              className="min-[900px]:h-[663px] 100px:h-[319px] 100px:col-span-1 min-[900px]:row-span-2"
+              className="min-[900px]:h-[646px] 100px:h-[319px] min-[100px]:col-span-1 min-[900px]:row-span-2"
             />
 
             <CollecItem
@@ -80,7 +80,7 @@ export default function Home() {
             Best Seller
           </h1>
 
-          <section className="flex justify-center items-center gap-6 flex-wrap">
+          <section className="flex justify-between items-center gap-6 flex-wrap">
             {DataProduct.map((items: TProduct) => {
               return (
                 items.pos == "HOT" && (
