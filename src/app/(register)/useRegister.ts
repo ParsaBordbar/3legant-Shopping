@@ -34,9 +34,8 @@ const AuthSignUpAndLoginForm = () => {
       regexPass.test(data.password) &&
       regexUsername.test(data.username)
     ) {
-      const randomValue = Math.random().toString(36).substring(2);
       toast.success("your sign up  proccess was successfull");
-      Cookies.set("token", randomValue, { expires: 7, path: "" });
+      Cookies.set("token", data.username, { expires: 7, path: "" });
       router.push("/");
       console.log(data);
     } else {
