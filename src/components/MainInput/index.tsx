@@ -1,17 +1,17 @@
 "use client";
 import { TInput } from "@/types";
 import { useMemo, useState } from "react";
+import { toast } from "react-toastify";
 
 const MainInput = (props: TInput) => {
   const [type, setType] = useState<boolean>(false);
-
   const TypeResult = useMemo(() => {
     console.log("in memo");
     if (props.id === "pass" && type) {
       return "text";
     } else if (!type && props.id === "pass") {
       return "password";
-    }
+    } 
   }, [type]);
   return (
     <div
@@ -37,18 +37,13 @@ const MainInput = (props: TInput) => {
             <img
               className="w-full h-full"
               src={
-                (props.id === "pass" && type) ? props.endicontwo : props.endicon
+                props.id === "pass" && type ? props.endicontwo : props.endicon
               }
               alt=""
             />
           </picture>
         )}
       </section>
-      {props.submode && (
-        <button className="third-font text-base font-semibold leading-7 text-[var(--neutral-04)] text-opacity-10">
-          SignUp
-        </button>
-      )}
     </div>
   );
 };
