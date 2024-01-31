@@ -6,7 +6,7 @@ import ContactForm from "./useContect";
 const ContactFormComponent = () => {
   const { register, handelValueInputs, handleSubmit } = ContactForm();
   return (
-    <section className="w-2/3 h-[78vh] self-start">
+    <section className="w-full min-[400px]:col-span-5 min-[500px]:mt-10 lg:col-span-3 h-[96vh] self-start">
       <form
         onSubmit={handleSubmit(handelValueInputs)}
         className="flex h-full justify-between flex-col px-[3.125rem] "
@@ -15,22 +15,22 @@ const ContactFormComponent = () => {
           <MainInput
             register={register("firstName")}
             placeholder="First Name"
-            className={"w-72"}
+            className={"w-full"}
           />
           <MainInput
             register={register("lastName")}
             placeholder="Last Name"
-            className={"w-72"}
+            className={"w-full"}
           />
           <MainInput
             register={register("email")}
             placeholder="Email"
-            className={"w-72"}
+            className={"w-full"}
           />
           <MainInput
             register={register("phoneNumber")}
             placeholder="Phone Number"
-            className={"w-72"}
+            className={"w-full"}
           />
           <MainInput
             register={register("massage")}
