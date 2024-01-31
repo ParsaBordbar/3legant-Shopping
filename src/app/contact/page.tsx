@@ -11,8 +11,8 @@ const ContactUs = () => {
           Any question or remarks? Just write us a message!
         </p>
       </div>
-      <section className="bg-zinc-100 w-full flex items-center p-2.5 rounded-lg">
-        <div className="flex w-1/3 rounded-md p-10 bg-[var(--bg-items-pop-over)] flex-col items-start gap-4">
+      <section className="bg-zinc-100 w-full grid  grid-cols-5 p-2.5 rounded-lg">
+        <div className="flex min-[400px]:col-span-5 lg:col-span-2 w-full rounded-md p-10 bg-[var(--bg-items-pop-over)] flex-col items-start gap-4">
           <div className="mb-24 flex flex-col items-start gap-1.5">
             <p className="font-bold text-xl sec-font">Contact Information</p>
             <p className="primary-font">Say something to start a live chat!</p>
