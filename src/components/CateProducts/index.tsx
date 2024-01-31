@@ -2,9 +2,9 @@ import CollecItem from "../collecItems"
 
 const CategoriesProduct = () => {
     return(
-        <ul className="w-full mb-10 h-fit gap-2 grid grid-rows-2 grid-cols-2">
+        <ul className="w-full mb-10 h-fit gap-2 min-[400px]:grid-cols-1 grid grid-rows-2 md:grid-cols-2">
         <CollecItem
-          className="row-span-2 !h-[454px]"
+          className="row-span-2 md:!h-[454px]"
           img={"/collec/headphone.svg"}
           title={"Headphones"}
           link={"/sortpro/headphones"}
