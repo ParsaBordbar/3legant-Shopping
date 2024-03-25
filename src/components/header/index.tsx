@@ -17,7 +17,7 @@ const Header = () => {
   const CheckingCookies = useMemo(() => {
     if (hasCookie) {
       return (
-        <Link href={"/account/dashboard"}>
+        <Link href={"/user-acc/profile"}>
           <UserToken className="px-1.5" mode="standard" />
         </Link>
       );
