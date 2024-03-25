@@ -12,7 +12,7 @@ const CollecItem = (props: TCollec) => {
       </picture>
 
       <div className="flex absolute bottom-12 left-12 flex-col gap-3">
-        <p className="sec-font group-hover:text-5xl transition-all ease-in-out duration-300 text-4xl font-semibold">
+        <p className="sec-font group-hover:text-4xl transition-all ease-in-out duration-300 text-3xl font-semibold">
           {props.title}
         </p>
         <section className="flex items-center gap-1">
