@@ -32,7 +32,7 @@ export default function Home() {
               Experience music like never before
             </span>
           </h1>
-          <MainButton className="px-14 w-72 py-3" value={"Shopping Now"} />
+          <MainButton className="px-14 w-72  py-3" value={"Shopping Now"} />
         </div>
       </div>
       <div className="grid grid-cols-1 gap-12 items-center w-[84%] mx-auto">
@@ -57,7 +57,7 @@ export default function Home() {
               link="/sortpro/headphones"
               img={"/collec/headphone.svg"}
               title={"HeadPhones"}
-              className="min-[900px]:h-[646px] 100px:h-[319px] min-[100px]:col-span-1 min-[900px]:row-span-2"
+              className="min-[900px]:h-[646px] min-[500px]:h-[223px] min-[100px]:h-[319px] min-[100px]:col-span-1 min-[900px]:row-span-2"
             />
 
             <CollecItem
