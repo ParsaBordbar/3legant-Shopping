@@ -37,21 +37,32 @@ const CartProduct = (props: TProduct) => {
 
   return (
     <div
-      onMouseEnter={() => setShow(true)}
-      onMouseLeave={() => setShow(false)}
-      className="flex gap-3 w-[262px] flex-col"
+      // onMouseEnter={() => setShow(true)}
+      // onMouseLeave={() => setShow(false)}
+      className="flex gap-3 group w-[262px] flex-col"
     >
       <section className="h-[349px] relative">
         <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
           <p className=" uppercase cursor-default px-[14px] font-bold py-1 rounded bg-white text-base third-font">
             {props.pos}
           </p>
-          {HeartProduct}
+          <picture className="group-hover:inline-block hidden drop-shadow top-4 left-4 cursor-pointer rounded-full p-1.5 bg-white shadow-[var(--box-shadow)]">
+          <img
+            className="overflow-hidden"
+            alt={props.name}
+            src="/productsIcon/heart.svg"
+          />
+        </picture>
         </div>
         <picture className="w-[262px] h-full">
           <img className="w-full h-full" src={props.img} alt="" />
         </picture>
-        {ButtonProduct}
+        <Link className="group-hover:inline-block hidden" href={`/sinpro/${props.id}`}>
+          <MainButton
+            className="w-[230px]  absolute bottom-4 left-4 py-2 px-6"
+            value={"Add To Cart"}
+          />
+        </Link>
       </section>
 
       <div className="flex flex-col w-full gap-1">
