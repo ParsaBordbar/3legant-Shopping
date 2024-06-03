@@ -14,6 +14,7 @@ export type TButton = {
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export type TProduct = {
+  className?:string
   id: string;
   img: string;
   name: string;
