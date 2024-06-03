@@ -11,10 +11,12 @@ import TimerItems from "@/components/timerItems";
 import DeliveryItems from "@/components/DeliveryItems";
 import Newsletter from "@/components/Newsletter";
 import NewProductsSlider from "@/components/NewPro";
+import Header from "@/components/header";
 
 export default function Home() {
   return (
     <main className="flex flex-col">
+      <Header />
       <div className="banner-one  w-full h-[721px]">
         {/* <picture className="w-full">
           <img className="w-full" src="/banners/ImagePlaceholder.svg" alt="" />
@@ -35,16 +37,7 @@ export default function Home() {
           <MainButton className="px-14 w-72  py-3" value={"Shopping Now"} />
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-12 items-center w-[84%] mx-auto">
-        <section className=" flex flex-wrap justify-center  my-2 gap-8">
-          <BrandsList img={"/brandsLogo/logo 01.svg"} />
-          <BrandsList img={"/brandsLogo/logo 02.svg"} />
-          <BrandsList img={"/brandsLogo/logo 03.svg"} />
-          <BrandsList img={"/brandsLogo/logo 04.svg"} />
-          <BrandsList img={"/brandsLogo/logo 05.svg"} />
-          <BrandsList img={"/brandsLogo/logo 6.svg"} />
-        </section>
-
+      <div className="grid grid-cols-1 mt-16 gap-12 items-center w-[84%] mx-auto">
         <NewProductsSlider />
 
         <div className="flex flex-col gap-12">

@@ -26,7 +26,6 @@ export default function RootLayout({
       <title>3legant</title>
       <body className={inter.className}>
         <>
-          <Header />
           {children}
           <Footer />
           <ToastContainer
