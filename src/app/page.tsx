@@ -80,11 +80,12 @@ export default function Home() {
             Best Seller
           </h1>
 
-          <section className="flex justify-between items-center gap-6 flex-wrap">
+          <section className="grid grid-cols-4 justify-items-center gap-6 ">
             {DataProduct.map((items: TProduct) => {
               return (
                 items.pos == "HOT" && (
                   <CartProduct
+                    className="lg:col-span-1 md:col-span-2 col-span-full"
                     id={items.id}
                     img={items.img}
                     name={items.name}
