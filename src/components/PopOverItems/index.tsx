@@ -15,7 +15,7 @@ const PopOverItems = (props: {
           <img className="w-full h-full" src={props.img} alt="" />
         </picture>
       )}
-      <p className="">{props.value}</p>
+      <p className="text-base">{props.value}</p>
     </Link>
   );
 };
