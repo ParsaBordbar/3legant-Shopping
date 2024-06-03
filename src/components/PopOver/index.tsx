@@ -28,7 +28,7 @@ const PopoverList = (props: {
       <PopoverHandler {...triggers}>
         <Link
           href={props.mainLink}
-          className="font-semibold border-none text-black outline-none text-sm p-1 flex items-center capitalize gap-2 primary-font"
+          className="font-semibold border-none text-black outline-none text-base  flex items-center capitalize gap-2 primary-font"
         >
           {props.value}
           <picture className="inline-block ">
