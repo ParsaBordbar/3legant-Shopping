@@ -37,7 +37,7 @@ const Header = () => {
   }, [hasCookie]);
 
   return (
-    <header className="flex flex-col  h-12">
+    <header className="flex flex-col  py-3">
       <section className="flex px-[160px] h-full items-center py-3 w-full">
         <picture className="inline-block  flex-grow">
           <Link className="" href={"/"}>
