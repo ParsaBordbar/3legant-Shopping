@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const CartProduct = (props: TProduct) => {
   return (
-    <div className="flex gap-3 group w-[262px] flex-col">
+    <div className={`flex gap-3 group flex-col ${props.className}`}>
       <section className="h-[349px] relative">
         <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
           <p className=" uppercase cursor-default px-[14px] font-bold py-1 rounded bg-white text-base third-font">
