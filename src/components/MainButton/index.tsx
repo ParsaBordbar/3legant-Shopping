@@ -4,7 +4,7 @@ const MainButton = (props: TButton) => {
   return (
     <button
       {...props}
-      className={`${props.className} hover:bg-white border-transparent border-2 transition-all duration-150 ease-in-out hover:border-black hover:text-black third-font bg-[var(--bg-btn)] text-white rounded-lg flex justify-center items-center `}
+      className={`${props.className} hover:text-[var(--primary-color)] hover:bg-white transition-all duration-150 ease-in-out  third-font text-white bg-[var(--primary-color)] rounded-lg flex justify-center items-center `}
     >
       {props.imgLink && (
         <picture className="mr-1 inline-block w-6 h-6">
