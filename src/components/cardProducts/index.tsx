@@ -22,26 +22,27 @@ const CartProduct = (props: TProduct) => {
           </picture>
         </div>
         <picture className="w-[262px] h-full">
-          <img className="w-full h-full" src={props.img} alt="" />
+          <img className="w-full rounded-lg h-full" src={props.img} alt="" />
         </picture>
-        <Link
-          className="group-hover:inline-block hidden"
-          href={`/sinpro/${props.id}`}
-        >
-          <MainButton
-            className="w-[230px]  absolute bottom-4 left-4 py-2 px-6"
-            value={"Add To Cart"}
-          />
-        </Link>
+        
       </section>
 
       <div className="flex flex-col w-full gap-1">
         <section>
           <DefaultRating />
-          <h1 className="third-font  overflow-hidden text-ellipsis whitespace-nowrap w-[266px] font-semibold leading-6 text-base">
+          <h1 className="third-font   overflow-hidden text-ellipsis whitespace-nowrap w-[266px] font-semibold leading-6 text-base">
             {props.name}
           </h1>
-          <p className="third-font font-semibold text-sm">${props.price}</p>
+          <p className="third-font  font-semibold text-sm">${props.price}</p>
+          <Link
+          className="inline-block mt-2 w-full"
+          href={`/sinpro/${props.id}`}
+        >
+          <MainButton
+            className="w-full py-2 px-6"
+            value={"Add To Cart"}
+          />
+        </Link>
         </section>
       </div>
     </div>
