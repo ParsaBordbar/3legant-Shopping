@@ -28,7 +28,7 @@ const SingleProduct = ({ params }: { params: { id: string } }) => {
     items && (
       <div className="my-10  ">
         <section className="grid sm:grid-cols-1 min-[940px]:grid-cols-5 gap-10">
-          <picture className="w-full min-[940px]:col-span-2 h-[496px] inline-block rounded-2xl border-2 border-[var(--neutral-03)] overflow-hidden">
+          <picture className="w-full min-[940px]:col-span-2 h-[496px] inline-block rounded-2xl border-2 border-[var(--forth-color)] overflow-hidden">
             <img
               className="w-full h-full object-cover"
               src={items.img}
@@ -38,7 +38,7 @@ const SingleProduct = ({ params }: { params: { id: string } }) => {
           <div className="flex min-[940px]:col-span-3 w-full  h-[496px] flex-col gap-4">
             <h1 className="font-bold third-font text-3xl">
               {items.name}
-              <mark className="bg-transparent ml-1 third-font text-xl font-light uppercase text-[var(--neutral-04)]">
+              <mark className="bg-transparent ml-1 third-font text-xl font-light uppercase text-[var(--forth-color)]">
                 {items.cato}
               </mark>
             </h1>
@@ -79,8 +79,16 @@ const SingleProduct = ({ params }: { params: { id: string } }) => {
               </section>
             )}
             <div className="flex gap-4">
-              <MainButton imgLink="/icons/heart-black.svg" className="py-4 bg-white border-2 border-black !text-black px-10 w-full" value={"Wishlist"} />
-              <MainButton imgLink="/icons/shopping-bag-white.svg" className="py-4 px-10 w-full" value={"Add To Cart"} />
+              <MainButton
+                imgLink="/icons/heart-black.svg"
+                className="py-4 bg-white border-2 border-black !text-black px-10 w-full"
+                value={"Wishlist"}
+              />
+              <MainButton
+                imgLink="/icons/shopping-bag-white.svg"
+                className="py-4 px-10 w-full"
+                value={"Add To Cart"}
+              />
             </div>
           </div>
         </section>

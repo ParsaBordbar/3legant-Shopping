@@ -49,48 +49,26 @@
 }
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --bg-alert-offer: rgb(20, 23, 24);
-  --text-attention: rgb(255, 171, 0);
-  --bg-header: linear-gradient(
-      0deg,
-      rgba(255, 171, 0, 0.64) 0%,
-      rgba(255, 171, 0, 0.64) 100%
-    ),
-    #fff;
   --primary-font: "Space Grotesk Regular";
   --sec-font: "Poppins", sans-serif;
   --third-font: "Inter";
   --bg-btn: rgb(20, 23, 24);
-  --primary-color: rgba(0, 0, 0, 1);
-  --sec-color: rgb(244, 244, 244);
-  --green: rgba(56, 203, 137, 1);
-  --orange: rgba(255, 171, 0, 1);
-  --red: rgba(255, 86, 48, 1);
-  --neutral-07: rgba(20, 23, 24, 1);
-  --neutral-06: rgba(35, 38, 39, 1);
-  --neutral-05: rgba(52, 56, 57, 1);
-  --neutral-04: rgba(108, 114, 117, 1);
-  --neutral-03: rgba(232, 236, 239, 1);
-  --neutral-02: rgba(243, 245, 247, 1);
-  --neutral-01: rgba(254, 254, 254, 1);
-  --color-mark-baner: rgba(55, 125, 255, 1);
-  --bg-pop-over: rgba(255, 161, 46, 0.824);
-  --bg-items-pop-over: rgb(252, 185, 85);
+  --peimary-color: #222831;
+  --sec-color: #31363f;
+  --third-color: rgb(118, 171, 174);
+  --forth-color: #eeeeee;
   --box-shadow: 0px 8px 16px -8px rgba(15, 15, 15, 0.12);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-    --color-mark-baner: rgba(55, 125, 255, 1);
-  }
-}
 /* styles */
+
+.bg-glass {
+  /* From https://css.glass */
+  background: rgba(118, 171, 174,0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13.3px);
+  -webkit-backdrop-filter: blur(13.3px);
+}
 
 html {
   overflow-x: hidden;
@@ -106,10 +84,6 @@ html {
 
 .third-font {
   font-family: var(--third-font);
-}
-
-header , .sell-banner{
-  background: var(--bg-header);
 }
 
 .rete svg {
@@ -138,11 +112,10 @@ header , .sell-banner{
   width: -webkit-fill-available !important;
 }
 
-
-.banner-one{
-  background: url('/banners/ImagePlaceholder.svg');
+.banner-one {
+  background: url("/banners/ImagePlaceholder.svg");
 }
 
-.banner-two{
-  background: url('/banners/headerbanner-2.svg');
+.banner-two {
+  background: url("/banners/headerbanner-2.svg");
 }

@@ -2,7 +2,6 @@ import MainInput from "@/components/MainInput";
 import ContactFormComponent from "@/components/contactForm";
 
 const ContactUs = () => {
-
   return (
     <div className="w-full mt-10 px-40 flex flex-col gap-10 ">
       <div className="flex flex-col self-start gap-2">
@@ -12,7 +11,7 @@ const ContactUs = () => {
         </p>
       </div>
       <section className="bg-zinc-100 w-full grid  grid-cols-5 p-2.5 rounded-lg">
-        <div className="flex min-[400px]:col-span-5 lg:col-span-2 w-full rounded-md p-10 bg-[var(--bg-items-pop-over)] flex-col items-start gap-4">
+        <div className="flex min-[400px]:col-span-5 lg:col-span-2 w-full rounded-md p-10 bg-[var(--third-color)] flex-col items-start gap-4">
           <div className="mb-24 flex flex-col items-start gap-1.5">
             <p className="font-bold text-xl sec-font">Contact Information</p>
             <p className="primary-font">Say something to start a live chat!</p>
@@ -71,7 +70,7 @@ const ContactUs = () => {
             </picture>
           </div>
         </div>
-        <ContactFormComponent/>
+        <ContactFormComponent />
       </section>
     </div>
   );

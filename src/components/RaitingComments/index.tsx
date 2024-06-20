@@ -14,7 +14,7 @@ const RaitingComments = () => {
         if (items.id >= "7") return;
       }
       return (
-        <div className="py-7 flex flex-col sm:h-fit md:h-[270px] justify-between w-full px-8 rounded-2xl bg-[var(--neutral-02)]">
+        <div className="py-7 flex flex-col sm:h-fit md:h-[270px] justify-between w-full px-8 rounded-2xl bg-[var(--forth-color)]">
           <div className="flex flex-col gap-3">
             <DefaultRating />
             <h1 className="third-font font-semibold text-2xl">{items.ID}</h1>
@@ -27,7 +27,9 @@ const RaitingComments = () => {
   }, [show]);
   return (
     <section className="flex flex-col gap-5 items-center">
-      <h1 className="sec-font self-start font-bold text-5xl">Rating & Reviews</h1>
+      <h1 className="sec-font self-start font-bold text-5xl">
+        Rating & Reviews
+      </h1>
       <div className="flex flex-col gap-5">
         <h1 className="third-font text-xl ">
           All Reviews - ({DataComment.length})
@@ -35,12 +37,12 @@ const RaitingComments = () => {
         <div className="grid md:grid-cols-2 gap-2 sm:grid-cols-1  ">
           {RenderComment()}
         </div>
-          <MainButton
-            onClick={() => setShow(!show)}
-            imgLink=""
-            className="w-1/4 !rounded-full place-self-center text-sm p-3"
-            value={show ? "Show Less" : "Show More"}
-          />
+        <MainButton
+          onClick={() => setShow(!show)}
+          imgLink=""
+          className="w-1/4 !rounded-full place-self-center text-sm p-3"
+          value={show ? "Show Less" : "Show More"}
+        />
       </div>
     </section>
   );

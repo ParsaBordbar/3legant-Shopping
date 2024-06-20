@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -20,12 +19,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
- 
   return (
     <html lang="en">
       <title>3legant</title>
       <body className={inter.className}>
         <>
+          <Header />
           {children}
           <Footer />
           <ToastContainer

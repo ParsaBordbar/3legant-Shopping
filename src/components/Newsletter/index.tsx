@@ -1,9 +1,8 @@
 import FormJoin from "./formJoin";
 
 const Newsletter = () => {
-  
   return (
-    <div className="w-full lg:bg-transparent min-[500px]:bg-[var(--neutral-03)] min-[500px]:h-[250px] md:h-[199px] lg:h-auto relative mt-10">
+    <div className="w-full lg:bg-transparent min-[500px]:bg-[var(--forth-color)] min-[500px]:h-[250px] md:h-[199px] lg:h-auto relative mt-10">
       <img
         className="w-full md:inline-block min-[500px]:hidden h-full"
         src="/banners/newsletterBanner.svg"
@@ -18,7 +17,7 @@ const Newsletter = () => {
             Sign up for deals, new products and promotions
           </p>
         </div>
-        <FormJoin/>
+        <FormJoin />
       </section>
     </div>
   );

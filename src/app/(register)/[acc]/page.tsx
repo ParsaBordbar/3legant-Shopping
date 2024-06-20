@@ -45,7 +45,7 @@ const SignUpAndLoginPage = ({ params }: { params: { acc: string } }) => {
   return (
     <div className="md:w-1/2 min-[400px]:w-full pl-20 h-[92%] flex flex-col justify-start py-7 items-start gap-8">
       <div className="w-full flex flex-col gap-6">
-        <h1 className="capitalize sec-font text-5xl font-medium leading-10 text-[var(--neutral-07)]">
+        <h1 className="capitalize sec-font text-5xl font-medium leading-10 text-[var(--peimary-color)]">
           {params.acc}
         </h1>
         {ChoeseTitle()}

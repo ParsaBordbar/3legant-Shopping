@@ -38,7 +38,7 @@ const PopoverList = (props: {
       </PopoverHandler>
       <PopoverContent
         {...triggers}
-        className={`z-50 border-none bg-[var(--bg-items-pop-over)] outline-none ${props.className} min-w-[10rem] `}
+        className={`z-50 border-none bg-glass outline-none ${props.className} w-[15rem] `}
       >
         <div className="flex  py-2 px-1.5 flex-col gap-1 w-full   rounded-lg ">
           {props.children}

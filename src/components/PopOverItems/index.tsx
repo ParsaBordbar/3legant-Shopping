@@ -8,7 +8,7 @@ const PopOverItems = (props: {
   return (
     <Link
       href={props.link ?? ""}
-      className="p-1 px-2 flex items-center gap-1 outline-none hover:py-3 sec-font cursor-pointer hover:bg-[var(--bg-pop-over)] transition-all ease-in-out duration-300 rounded-md"
+      className="p-1 px-2 flex items-center gap-1 outline-none hover:py-3 sec-font cursor-pointer border-transparent border hover:border-[var(--primary-color)] transition-all ease-in-out duration-300 rounded-md"
     >
       {props.img && (
         <picture className="w-6 h-6">

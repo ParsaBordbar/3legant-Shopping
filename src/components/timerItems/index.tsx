@@ -32,11 +32,11 @@ const TimerItems = (props: TTimer) => {
 
   return (
     <div className="flex w-14 h-20 gap-2 flex-col items-center">
-      <h1 className="m-0 h-fit bg-white p-[0.625rem] text-[var(--neutral-07)] sec-font text-4xl">
+      <h1 className="m-0 h-fit bg-white p-[0.625rem] text-[var(--peimary-color)] sec-font text-4xl">
         {timer < 10 ? "0" + timer : timer}
       </h1>
 
-      <p className="third-font text-xs leading-5 text-[var(--neutral-07)]">
+      <p className="third-font text-xs leading-5 text-[var(--peimary-color)]">
         {props.desc}
       </p>
     </div>

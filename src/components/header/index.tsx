@@ -37,7 +37,7 @@ const Header = () => {
   }, [hasCookie]);
 
   return (
-    <header className="flex flex-col  py-3">
+    <header className="flex flex-col bg-glass fixed w-full z-50 py-3">
       <section className="flex px-[160px] h-full items-center py-3 w-full">
         <picture className="inline-block  flex-grow">
           <Link className="" href={"/"}>
@@ -48,7 +48,7 @@ const Header = () => {
           <ListNav link="/" value="Home" />
           <PopoverList
             mainLink="/product/main"
-            className="translate-x-[3rem]"
+            className="translate-x-[5.5rem]"
             children={
               <>
                 <PopOverItems
@@ -72,7 +72,7 @@ const Header = () => {
           />
           <PopoverList
             mainLink="/product/main"
-            className="translate-x-[2.5rem]"
+            className="translate-x-[4.5rem]"
             children={
               <>
                 <PopOverItems

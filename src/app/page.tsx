@@ -16,16 +16,15 @@ import Header from "@/components/header";
 export default function Home() {
   return (
     <main className="flex flex-col">
-      <Header />
-      <div className="banner-one  w-full h-[721px]">
-        {/* <picture className="w-full">
+      {/* <div className="banner-one  w-full h-[721px]">
+        <picture className="w-full">
           <img className="w-full" src="/banners/ImagePlaceholder.svg" alt="" />
-        </picture> */}
+        </picture>
         <div className=" absolute lg:top-1/2 lg:left-[40%] text-lg  min-[1321px]:top-[282px] flex flex-col gap-7 min-[1321px]:left-[732px] ">
           <h1 className="flex flex-col gap-2">
             <span className="text-8xl font-bold  animate-wiggle sec-font">
               Listen to the{" "}
-              <mark className="bg-transparent text-[var(--color-mark-baner)]">
+              <mark className="bg-transparent text-[var(--third-color)]">
                 amazing
               </mark>{" "}
               music sound.
@@ -36,8 +35,8 @@ export default function Home() {
           </h1>
           <MainButton className="px-14 w-72  py-3" value={"Shopping Now"} />
         </div>
-      </div>
-      <div className="grid grid-cols-1 mt-16 gap-12 items-center w-[84%] mx-auto">
+      </div> */}
+      <div className="grid grid-cols-1 mt-28 gap-12 items-center w-[84%] mx-auto">
         <NewProductsSlider />
 
         <div className="flex flex-col gap-12">
@@ -105,7 +104,7 @@ export default function Home() {
 
           <section className="flex flex-col gap-6">
             <div className="flex flex-col gap-4 leading-4 ">
-              <p className="text-[var(--color-mark-baner)] m-0 font-bold uppercase thrid-font">
+              <p className="text-[var(--third-color)] m-0 font-bold uppercase thrid-font">
                 PROMOTION
               </p>
               <h1 className="sec-font text-4xl leading-10 font-semibold">
@@ -117,7 +116,7 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-6">
-              <p className="third-font text-base font-normal leading-7 text-[var(--neutral-07)]">
+              <p className="third-font text-base font-normal leading-7 text-[var(--peimary-color)]">
                 Offer expires in:
               </p>
               <section className="flex gap-4 items-center">
@@ -160,14 +159,14 @@ export default function Home() {
 
       <div className=" flex flex-col gap-10 mt-10">
         <section className="flex items-center flex-col gap-4">
-          <p className="uppercase third-font font-bold text-base leading-4 text-[var(--neutral-04)]">
+          <p className="uppercase third-font font-bold text-base leading-4 text-[var(--forth-color)]">
             newsfeed
           </p>
           <h1 className="sec-font font-semibold text-[2.5rem]">Instagram</h1>
           <p className="text-xl leading-8 third-font">
             Follow us on social media for more discount & promotions
           </p>
-          <p className="text-[var(--neutral-04)] sec-font text-xl leading-7">
+          <p className="text-[var(--forth-color)] sec-font text-xl leading-7">
             @3legant_official
           </p>
         </section>

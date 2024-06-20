@@ -11,11 +11,11 @@ const MainInput = (props: TInput) => {
       return "text";
     } else if (!type && props.id === "pass") {
       return "password";
-    } 
+    }
   }, [type]);
   return (
     <div
-      className={`flex ${props.className} focus-within:border-[var(--neutral-07)] transition-all ease-in-out duration-100 focus-within:border-b-2 parent-input  border-b  py-3.5 border-[var(--neutral-04)] border-opacity-50 items-center`}
+      className={`flex ${props.className} focus-within:border-[var(--peimary-color)] transition-all ease-in-out duration-100 focus-within:border-b-2 parent-input  border-b  py-3.5 border-[var(--forth-color)] border-opacity-50 items-center`}
     >
       <section className="flex flex-grow gap-2 items-center">
         {props.firsticon && (
@@ -27,7 +27,7 @@ const MainInput = (props: TInput) => {
           {...props.register}
           {...props}
           type={TypeResult ?? props.type}
-          className="placeholder:third-font placeholder:text-base placeholder:leading-7 placeholder:text-[var(--neutral-04)] bg-transparent  child-input  w-full placeholder:font-normal outline-none font-normal"
+          className="placeholder:third-font placeholder:text-base placeholder:leading-7 placeholder:text-[var(--forth-color)] bg-transparent  child-input  w-full placeholder:font-normal outline-none font-normal"
         />
         {props.endicon && (
           <picture
