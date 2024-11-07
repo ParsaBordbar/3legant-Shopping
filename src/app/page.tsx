@@ -93,7 +93,7 @@ export default function Home() {
       </div>
 
       <div className=" mt-[6.25rem] mb-10 flex flex-col gap-10 ">
-        <div className="w-full  md:items-center md:justify-normal min-[100px]:items-center min-[100px]:justify-center  h-[532px] flex gap-[4.5rem]  sell-banner ">
+        <div className="w-full  bg-orange-300   md:items-center md:justify-normal min-[100px]:items-center min-[100px]:justify-center  h-[532px] flex gap-[4.5rem]  sell-banner ">
           <picture className="md:inline-block min-[100px]:hidden h-[532px] w-1/2">
             <img
               className="w-full object-cover h-full"
@@ -104,7 +104,7 @@ export default function Home() {
 
           <section className="flex flex-col gap-6">
             <div className="flex flex-col gap-4 leading-4 ">
-              <p className="text-[var(--third-color)] m-0 font-bold uppercase thrid-font">
+              <p className="text-black m-0 font-bold uppercase primary-font">
                 PROMOTION
               </p>
               <h1 className="sec-font text-4xl leading-10 font-semibold">
@@ -159,14 +159,14 @@ export default function Home() {
 
       <div className=" flex flex-col gap-10 mt-10">
         <section className="flex items-center flex-col gap-4">
-          <p className="uppercase third-font font-bold text-base leading-4 text-[var(--forth-color)]">
+          <p className="uppercase third-font font-bold text-base leading-4 text-zinc-800">
             newsfeed
           </p>
           <h1 className="sec-font font-semibold text-[2.5rem]">Instagram</h1>
           <p className="text-xl leading-8 third-font">
             Follow us on social media for more discount & promotions
           </p>
-          <p className="text-[var(--forth-color)] sec-font text-xl leading-7">
+          <p className="text-zinc-800 sec-font text-xl leading-7">
             @3legant_official
           </p>
         </section>

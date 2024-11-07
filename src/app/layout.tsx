@@ -25,7 +25,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <>
           <Header />
+          <div className="pt-16">
           {children}
+          </div>
           <Footer />
           <ToastContainer
             position="top-center"
