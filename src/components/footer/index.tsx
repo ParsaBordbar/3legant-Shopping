@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
       <Newsletter />
-      <footer className="py-20 bg-[var(--peimary-color)] flex flex-col gap-12 items-center min-[400px]:px-16 md:px-40">
+      <footer className="py-20 mt-20 bg-zinc-800 flex flex-col gap-12 items-center min-[400px]:px-16 md:px-40">
         <div className="flex min-[400px]:flex-col min-[400px]:gap-10 lg:flex-row w-full items-center">
           <div className="flex-grow min-[400px]:flex-col md:flex-row flex  items-center md:gap-8 min-[400px]:gap-4">
             <picture>
@@ -34,11 +34,11 @@ const Footer = () => {
             <li className="list-none third-font text-sm leading-5 text-[var(--forth-color)]">
               Blog
             </li>
-            <Link href={"/contact"}>
+            {/* <Link href={"/contact"}>
               <li className="list-none third-font text-sm leading-5 text-[var(--forth-color)]">
                 Contact Us
               </li>
-            </Link>
+            </Link> */}
           </nav>
         </div>
         <section className="border-t min-[400px]:gap-4 flex min-[400px]:flex-col lg:flex-row items-center w-full py-4">
