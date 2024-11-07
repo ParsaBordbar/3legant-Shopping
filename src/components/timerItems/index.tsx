@@ -22,7 +22,7 @@ const TimerItems = (props: TTimer) => {
     }
   };
 
-  const deadline = "aug, 30, 2024";
+  const deadline = "nov, 30, 2024";
 
   useEffect(() => {
     const interval = setInterval(() => getTimer(deadline), 1000);
