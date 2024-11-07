@@ -90,7 +90,7 @@ const Header = () => {
             value="Product"
           />
 
-          <ListNav link="/contact" value="Contact Us" />
+          {/* <ListNav link="/contact" value="Contact Us" /> */}
         </nav>
         <section className=" flex items-center gap-4">
           <picture className="inline-block w-6">
