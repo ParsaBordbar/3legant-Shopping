@@ -9,6 +9,12 @@ type TTimer = {
 const TimerItems = (props: TTimer) => {
   const [timer, setTimer] = useState(0);
 
+  const forwardToNextWeek = () => {
+    const today = new Date();
+    today.setDate(today.getDate() + 7);
+    return today.toISOString();
+  }
+
   const getTimer = (deadline: string) => {
     const time = Date.parse(deadline) - Date.now();
     if (props.id === "d") {
@@ -21,8 +27,7 @@ const TimerItems = (props: TTimer) => {
       setTimer(Math.floor((time / 1000) % 60));
     }
   };
-
-  const deadline = "nov, 30, 2024";
+  const deadline = forwardToNextWeek();
 
   useEffect(() => {
     const interval = setInterval(() => getTimer(deadline), 1000);
